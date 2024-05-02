@@ -185,4 +185,5 @@ Girl::
 
 MomBlockingDoor::
 # 134 "data/maps/BrineshoreTown/scripts.pory"
-	.string "Not right now, {PLAYER}, I'm waiting on the exterminator.$"
+	.string "Not right now, {PLAYER},\n"
+	.string "I'm waiting on the exterminator.$"

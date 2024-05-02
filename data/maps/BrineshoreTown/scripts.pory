@@ -132,5 +132,5 @@ text Girl{
 }
 
 text MomBlockingDoor{
-    format("Not right now, {PLAYER}, I'm waiting on the exterminator.")
+    format("Not right now, {PLAYER}, \nI'm waiting on the exterminator.")
 }
