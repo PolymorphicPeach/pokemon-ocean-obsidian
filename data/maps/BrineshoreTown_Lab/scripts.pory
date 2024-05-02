@@ -1,0 +1,256 @@
+mapscripts BrineshoreTown_Lab_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: BrineshoreTown_Lab_OnTransition
+}
+
+script BrineshoreTown_Lab_OnTransition{
+    if(flag(FLAG_SYS_POKEMON_GET)){
+        setflag(FLAG_TEMP_1)
+    }
+    else{
+        clearflag(FLAG_TEMP_1)
+    }
+}
+
+script BrineshoreTown_Lab_EventScript_Pokeball_1{
+    lockall
+    if(!flag(FLAG_SYS_POKEMON_GET)){
+        setvar(VAR_TEMP_0, SPECIES_HONEDGE)
+        setvar(VAR_TEMP_1, 1)
+        bufferspeciesname(STR_VAR_1, SPECIES_HONEDGE)
+        call(BrineshoreTown_Lab_EventScript_ExamineStarter)
+    }
+    else{
+        msgbox(CantTakeAnother)
+        waitmessage
+    }
+    releaseall
+    end
+}
+
+script BrineshoreTown_Lab_EventScript_Pokeball_2{
+    lockall
+   if(!flag(FLAG_SYS_POKEMON_GET)){
+        setvar(VAR_TEMP_0, SPECIES_TOGEPI)
+        setvar(VAR_TEMP_1, 2)
+        bufferspeciesname(STR_VAR_1, SPECIES_TOGEPI)
+        call(BrineshoreTown_Lab_EventScript_ExamineStarter)
+    }
+    else{
+        msgbox(CantTakeAnother)
+        waitmessage
+    }
+    releaseall
+    end
+}
+
+script BrineshoreTown_Lab_EventScript_Pokeball_3{
+    lockall
+    if(!flag(FLAG_SYS_POKEMON_GET)){
+        setvar(VAR_TEMP_0, SPECIES_SANDILE)
+        setvar(VAR_TEMP_1, 3)
+        bufferspeciesname(STR_VAR_1, SPECIES_SANDILE)
+        call(BrineshoreTown_Lab_EventScript_ExamineStarter)
+    }
+    else{
+        msgbox(CantTakeAnother)
+        waitmessage
+    }
+    releaseall
+    end
+}
+
+script BrineshoreTown_Lab_EventScript_Computer{
+    lockall
+    if(!flag(FLAG_SYS_POKEMON_GET)){
+        setvar(VAR_TEMP_0, SPECIES_PORYGON)
+        setvar(VAR_TEMP_1, 4)
+        bufferspeciesname(STR_VAR_1, SPECIES_PORYGON)
+        call(BrineshoreTown_Lab_EventScript_ExamineStarter)
+    }
+    else{
+        msgbox(CantTakeAnother)
+        waitmessage
+    }
+    releaseall
+    end
+}
+
+script BrineshoreTown_Lab_EventScript_ExamineStarter{
+    showmonpic(VAR_TEMP_0, 10, 3)
+    msgbox(ChooseStarterText, MSGBOX_YESNO)
+
+    if(var(VAR_RESULT) == YES){
+        playfanfare(MUS_OBTAIN_ITEM)
+        // give pokemon
+
+        if(var(VAR_TEMP_0) == SPECIES_TOGEPI){
+            givemon(VAR_TEMP_0, 5, ITEM_NONE, ITEM_POKE_BALL, 15, 1)
+        }
+        elif(var(VAR_TEMP_0) == SPECIES_HONEDGE){
+            givemon(VAR_TEMP_0, 5, ITEM_NONE, ITEM_POKE_BALL, 3)
+        }
+        elif(var(VAR_TEMP_0) == SPECIES_SANDILE){
+            givemon(VAR_TEMP_0, 5, ITEM_NONE, ITEM_POKE_BALL, 3, 1)
+        }
+        elif(var(VAR_TEMP_0) == SPECIES_PORYGON){
+            givemon(VAR_TEMP_0, 5, ITEM_NONE, ITEM_POKE_BALL, 15, 1)
+        }
+
+        // This flag must be set after getting a pokemon 
+        // for the first time, or you can't access the 
+        // party screen.
+        setflag(FLAG_SYS_POKEMON_GET)
+        setvar(VAR_STARTER_MON, VAR_TEMP_1)
+        setvar(BRINESHORETOWN_STATE, 1)
+
+        // remove starter pokeball
+        call(BrineshoreTown_Lab_RemoveStarterPokeball)
+        msgbox(StarterChosenText)
+        waitmessage
+    }
+    else{
+        msgbox(StillLookingText)
+        waitmessage
+    }
+    hidemonpic
+}
+
+script BrineshoreTown_Lab_RemoveStarterPokeball{
+    removeobject(VAR_TEMP_1)
+
+    if(var(VAR_TEMP_1) == 1){
+        setflag(FLAG_STARTER_BALL_1)
+        return
+    }
+    if(var(VAR_TEMP_1) == 2){
+        setflag(FLAG_STARTER_BALL_2)
+        return
+    }
+    if(var(VAR_TEMP_1) == 3){
+        setflag(FLAG_STARTER_BALL_3)
+        return
+    }
+    if(var(VAR_TEMP_1) == 4){
+        setflag(FLAG_STARTER_BALL_4)
+        return
+    }
+}
+
+script BrineshoreTown_Lab_YewGivePokedex{
+    lock
+    msgbox(GivePokedex)
+    playfanfare(MUS_OBTAIN_ITEM)
+    setflag(FLAG_SYS_POKEDEX_GET)
+    waitmessage
+    release
+}
+
+script BrineshoreTown_Lab_TalkToYew{
+    lock
+    faceplayer
+    if(flag(FLAG_STARTER_BALL_4)){
+        msgbox(FixedComputer)
+    }
+    else{
+        msgbox(BrokenComputer)
+    }
+    release
+}
+
+script BrineshoreTown_Lab_YewJoinsHumanParty{
+    lockall
+
+    if(var(BRINESHORETOWN_STATE) == 1 && !flag(FLAG_SYS_COMPANION_GET)){
+        msgbox(WaitText)
+        applymovement(OBJ_EVENT_ID_PLAYER, face_up)
+        applymovement(5, ProfessorWalkDown)
+        waitmovement(5)
+        msgbox(TakeYew)
+        waitmessage
+        setflag(FLAG_SYS_COMPANION_GET)
+        setvar(BRINESHORETOWN_STATE, 3)
+        removeobject(6)
+        setflag(FLAG_TEMP_1)
+    }
+
+    releaseall
+    end  
+}
+
+script BrineshoreTown_Lab_TalkToProfessor{
+    lock
+    faceplayer
+    if(!flag(FLAG_SYS_POKEMON_GET)){
+        msgbox(StandardProfessorText)
+        waitmessage
+    }
+    else{
+        msgbox("{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Good luck.")
+        waitmessage
+    }
+    release
+}
+
+
+
+movement YewWalkToProfessor{
+    walk_fast_left * 3
+    face_down
+}
+
+movement ProfessorWalkDown{
+    walk_right * 2
+    walk_down * 2
+}
+
+movement walk_up{
+    walk_up
+}
+
+text StandardProfessorText{
+    format("{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Go ahead and choose a Pokemon,\n"
+        "I need to get this delivery sorted.\p")
+}
+
+text ChooseStarterText{
+    "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}, is this {STR_VAR_1} the\n"
+    "one you want?\p"
+}
+
+text StarterChosenText{
+    "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}An excellent choice."
+}
+
+text StillLookingText{
+    "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ok, {PLAYER}, take your time.\p"
+}
+
+text CantTakeAnother{
+     "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You can't have that,\n"
+     "stop being greedy!"
+}
+
+text WaitText{
+    "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}WAIT!\p"
+}
+
+text TakeYew{
+    format("{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Assistant Yew has yet to\npass the POPME.\pYou'll be taking him north with you to the\nAcademy where he can take the exam.")
+ 
+}
+
+text GivePokedex{
+     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I need you to escort me,\n"
+     "north. In exchange for your trouble, take\p"
+     "this Pokedex."
+}
+
+text BrokenComputer{
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That Porygon is\n"
+     "always breaking this computer somehow..."
+}
+
+text FixedComputer{
+    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take good care of\n"
+     "Porygon for me."
+}

@@ -1072,3 +1072,17 @@ EventScript_VsSeekerChargingDone::
 	.include "data/text/frontier_brain.inc"
 	.include "data/text/save.inc"
 	.include "data/text/birch_speech.inc"
+
+	.include "data/maps/NewLab/scripts.inc"
+
+	.include "data/maps/BrineshoreTown/scripts.inc"
+
+	.include "data/maps/BrineshoreTown_Lab/scripts.inc"
+
+	.include "data/maps/Route1/scripts.inc"
+
+	.include "data/maps/BrineshoreTown_Lighthouse_1F/scripts.inc"
+
+	.include "data/maps/BrineshoreTown_Rathouse/scripts.inc"
+
+	.include "data/maps/BrineshoreTown_Rathouse_Basement/scripts.inc"

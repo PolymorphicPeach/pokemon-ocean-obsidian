@@ -242,10 +242,10 @@ static const struct TrainerMon sParty_GruntWeatherInst4[] = {
     }
 };
 
-static const struct TrainerMon sParty_GruntAquaHideout5[] = {
+static const struct TrainerMon Party_BrineshoreGaurd[] = {
     {
-    .lvl = 32,
-    .species = SPECIES_CARVANHA,
+    .lvl = 4,
+    .species = SPECIES_RATTATA,
     }
 };
 

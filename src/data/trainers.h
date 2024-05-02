@@ -324,17 +324,21 @@ const struct Trainer gTrainers[] = {
         .party = TRAINER_PARTY(sParty_GruntWeatherInst4),
     },
 
-    [TRAINER_GRUNT_AQUA_HIDEOUT_5] =
+    // ======== start of custom ======================================
+
+    [BRINESHORE_GAURD] =
     {
-        .trainerClass = TRAINER_CLASS_TEAM_AQUA,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_AQUA,
-        .trainerPic = TRAINER_PIC_AQUA_GRUNT_F,
-        .trainerName = _("GRUNT"),
+        .trainerClass = TRAINER_CLASS_CAMPER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_CAMPER,
+        .trainerName = _("JOEY"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE,
-        .party = TRAINER_PARTY(sParty_GruntAquaHideout5),
+        .party = TRAINER_PARTY(Party_BrineshoreGaurd),
     },
+
+    // ============= end of custom =================================
 
     [TRAINER_GRUNT_AQUA_HIDEOUT_6] =
     {

@@ -652,13 +652,13 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED_0x264  0x264 // Unused Flag
-#define FLAG_UNUSED_0x265  0x265 // Unused Flag
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
+#define FLAG_UNUSED  0x264
+#define FLAG_STARTER_BALL_1  0x265
+#define FLAG_STARTER_BALL_2  0x266
+#define FLAG_STARTER_BALL_3  0x267 
+#define FLAG_STARTER_BALL_4 0x268 
+#define FLAG_FIRST_BATTLE  0x269 
+#define FLAG_BRINESHORE_GAURD  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
@@ -1346,7 +1346,7 @@
 #define FLAG_SYS_POKEMON_GET                         (SYSTEM_FLAGS + 0x0) // FLAG_0x860
 #define FLAG_SYS_POKEDEX_GET                         (SYSTEM_FLAGS + 0x1)
 #define FLAG_SYS_POKENAV_GET                         (SYSTEM_FLAGS + 0x2)
-#define FLAG_UNUSED_0x863                            (SYSTEM_FLAGS + 0x3) // Unused Flag
+#define FLAG_SYS_COMPANION_GET                            (SYSTEM_FLAGS + 0x3) // Unused Flag
 #define FLAG_SYS_GAME_CLEAR                          (SYSTEM_FLAGS + 0x4)
 #define FLAG_SYS_CHAT_USED                           (SYSTEM_FLAGS + 0x5)
 #define FLAG_UNLOCKED_TRENDY_SAYINGS                 (SYSTEM_FLAGS + 0x6)
@@ -1588,15 +1588,15 @@
 #define FLAG_UNUSED_0x933                           (DAILY_FLAGS_START + 0x13) // Unused Flag
 #define FLAG_DAILY_APPRENTICE_LEAVES                (DAILY_FLAGS_START + 0x14)
 
-#define FLAG_UNUSED_0x935                           (DAILY_FLAGS_START + 0x15) // Unused Flag
-#define FLAG_UNUSED_0x936                           (DAILY_FLAGS_START + 0x16) // Unused Flag
-#define FLAG_UNUSED_0x937                           (DAILY_FLAGS_START + 0x17) // Unused Flag
-#define FLAG_UNUSED_0x938                           (DAILY_FLAGS_START + 0x18) // Unused Flag
-#define FLAG_UNUSED_0x939                           (DAILY_FLAGS_START + 0x19) // Unused Flag
-#define FLAG_UNUSED_0x93A                           (DAILY_FLAGS_START + 0x1A) // Unused Flag
-#define FLAG_UNUSED_0x93B                           (DAILY_FLAGS_START + 0x1B) // Unused Flag
-#define FLAG_UNUSED_0x93C                           (DAILY_FLAGS_START + 0x1C) // Unused Flag
-#define FLAG_UNUSED_0x93D                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
+#define FOLLOWER_FLAG_HAS_RUNNING_FRAMES                          (DAILY_FLAGS_START + 0x15) // Unused Flag
+#define FOLLOWER_FLAG_CAN_BIKE                           (DAILY_FLAGS_START + 0x16) // Unused Flag
+#define FOLLOWER_FLAG_CAN_LEAVE_ROUTE                          (DAILY_FLAGS_START + 0x17) // Unused Flag
+#define FOLLOWER_FLAG_CAN_SURF                          (DAILY_FLAGS_START + 0x18) // Unused Flag
+#define FOLLOWER_FLAG_CAN_WATERFALL                           (DAILY_FLAGS_START + 0x19) // Unused Flag
+#define FOLLOWER_FLAG_CAN_DIVE                           (DAILY_FLAGS_START + 0x1A) // Unused Flag
+#define FOLLOWER_FLAG_CAN_ROCK_CLIMB                           (DAILY_FLAGS_START + 0x1B) // Unused Flag
+#define FOLLOWER_FLAG_CLEAR_ON_WHITE_OUT                           (DAILY_FLAGS_START + 0x1C) // Unused Flag
+#define FOLLOWER_FLAG_CUSTOM_FOLLOW_SCRIPT                           (DAILY_FLAGS_START + 0x1D) // Unused Flag
 #define FLAG_UNUSED_0x93E                           (DAILY_FLAGS_START + 0x1E) // Unused Flag
 #define FLAG_UNUSED_0x93F                           (DAILY_FLAGS_START + 0x1F) // Unused Flag
 #define FLAG_UNUSED_0x940                           (DAILY_FLAGS_START + 0x20) // Unused Flag

@@ -47,6 +47,7 @@
 #include "constants/battle_frontier.h"
 #include "constants/rgb.h"
 #include "constants/songs.h"
+#include "ui_stat_editor.h"
 
 #if (DECAP_ENABLED) && (DECAP_MIRRORING) && !(DECAP_START_MENU)
 #define AddTextPrinterParameterized (AddTextPrinterFixedCaseParameterized)
@@ -68,7 +69,9 @@ enum
     MENU_ACTION_REST_FRONTIER,
     MENU_ACTION_RETIRE_FRONTIER,
     MENU_ACTION_PYRAMID_BAG,
+    MENU_ACTION_STAT_EDITOR,
     MENU_ACTION_DEBUG,
+    MENU_ACTION_COMPANIONS
 };
 
 // Save status
@@ -109,6 +112,7 @@ static bool8 StartMenuSafariZoneRetireCallback(void);
 static bool8 StartMenuLinkModePlayerNameCallback(void);
 static bool8 StartMenuBattlePyramidRetireCallback(void);
 static bool8 StartMenuBattlePyramidBagCallback(void);
+static bool8 StartMenuStatEditorCallback(void);
 static bool8 StartMenuDebugCallback(void);
 
 // Menu callbacks
@@ -204,6 +208,8 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire,  {.u8_void = StartMenuBattlePyramidRetireCallback}},
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
+    [MENU_ACTION_COMPANIONS] = {gText_MenuCompanions, {.u8_void = StartMenuPokemonCallback}},
+    [MENU_ACTION_STAT_EDITOR]     = {gText_StatEditor,  {.u8_void = StartMenuStatEditorCallback}}
 };
 
 static const struct BgTemplate sBgTemplates_LinkBattleSave[] =
@@ -329,14 +335,17 @@ static void AddStartMenuAction(u8 action)
 
 static void BuildNormalStartMenu(void)
 {
-    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE)
-    {
+    if (FlagGet(FLAG_SYS_POKEDEX_GET) == TRUE){
         AddStartMenuAction(MENU_ACTION_POKEDEX);
     }
-    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE)
-    {
+    if (FlagGet(FLAG_SYS_POKEMON_GET) == TRUE){
         AddStartMenuAction(MENU_ACTION_POKEMON);
     }
+
+    if(FlagGet(FLAG_SYS_COMPANION_GET) == TRUE){
+        AddStartMenuAction(MENU_ACTION_COMPANIONS);
+    }
+
 
     AddStartMenuAction(MENU_ACTION_BAG);
 
@@ -346,6 +355,9 @@ static void BuildNormalStartMenu(void)
     }
 
     AddStartMenuAction(MENU_ACTION_PLAYER);
+
+    //AddStartMenuAction(MENU_ACTION_STAT_EDITOR);
+
     AddStartMenuAction(MENU_ACTION_SAVE);
     AddStartMenuAction(MENU_ACTION_OPTION);
     AddStartMenuAction(MENU_ACTION_EXIT);
@@ -1487,4 +1499,10 @@ void AppendToList(u8 *list, u8 *pos, u8 newEntry)
 {
     list[*pos] = newEntry;
     (*pos)++;
+}
+
+static bool8 StartMenuStatEditorCallback(void)
+{
+    CreateTask(Task_OpenStatEditorFromStartMenu, 0);
+    return TRUE;
 }

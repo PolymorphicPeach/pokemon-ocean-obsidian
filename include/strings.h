@@ -248,6 +248,7 @@ extern const u8 gText_SaveFailed[];
 // menu texts
 extern const u8 gText_MenuPokedex[];
 extern const u8 gText_MenuPokemon[];
+extern const u8 gText_MenuCompanions[];
 extern const u8 gText_MenuBag[];
 extern const u8 gText_MenuPokenav[];
 extern const u8 gText_MenuPlayer[];
@@ -523,6 +524,7 @@ extern const u8 gText_SpDef[];
 extern const u8 gText_Speed[];
 extern const u8 gText_Dash[];
 extern const u8 gText_Plus[];
+extern const u8 gText_StatEditor[];
 
 //Pokédex text
 extern const u8 gText_CryOf[];

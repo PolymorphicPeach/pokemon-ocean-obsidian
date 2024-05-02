@@ -1,0 +1,30 @@
+// Brineshore Town States
+// -------------------------
+
+mapscripts BrineshoreTown_Lighthouse_1F_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: BrineshoreTown_Lighthouse_1F_OnTransition
+}
+
+script BrineshoreTown_Lighthouse_1F_OnTransition{
+
+}
+
+script BrineshoreTown_Lighthouse_1F_Rest{
+    lock
+    msgbox("Would you like to rest and heal your party?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        special(HealPlayerParty)
+        playfanfare(MUS_RG_HEAL)
+    }
+
+    
+    release
+}
+
+script SetFollower{
+    lock
+    faceplayer
+    setfollower(1, VAR_TEMP_D)
+    release
+    end
+}

@@ -1,0 +1,136 @@
+// Brineshore Town States
+// -------------------------
+// 0.) Nothing has happened
+// 1.) Player has first pokemon
+
+mapscripts BrineshoreTown_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: BrineshoreTown_OnTransition
+    
+}
+
+
+script BrineshoreTown_OnTransition{
+    if(!flag(FLAG_SYS_POKEMON_GET)){
+        // Despawn gaurd trainer battle
+        setflag(FLAG_TEMP_1)
+    }
+    else{
+        // Despawn rat house lady
+        setflag(FLAG_TEMP_2)
+    }
+}
+
+
+script BrineshoreTown_EventScript_FirstBattle{
+    trainerbattle_single(BRINESHORE_GAURD, FirstBattle_Intro, FirstBattle_Outro)
+    msgbox(FirstBattle_PostBattle, MSGBOX_AUTOCLOSE)
+    end
+}
+
+script BrineshoreTown_BlockTownExit{
+    lock
+    applymovement(1, face_right)
+    msgbox(TownGuard_CannotLeave, MSGBOX_AUTOCLOSE)
+    applymovement(OBJ_EVENT_ID_PLAYER, walk_down)
+    waitmovement(0)
+    applymovement(1, face_down)
+    waitmovement(0)
+    release
+}
+
+script BrineshoreTown_Store{
+    lock
+    faceplayer
+    msgbox("Anything you like?")
+    waitmessage
+    pokemart(BrineshoreTown_Store_Items)
+    msgbox("Have a nice day!")
+    release
+}
+
+mart BrineshoreTown_Store_Items{
+    ITEM_POTION
+    ITEM_PARALYZE_HEAL
+    ITEM_ANTIDOTE
+    ITEM_POKE_BALL
+}
+
+script BrineshoreTown_TalkToBoy{
+    lock
+    faceplayer
+    msgbox(BoyCantSleep)
+    waitmessage
+    release
+}
+
+script BrineshoreTown_TalkToTuber{
+
+}
+
+script BrineshoreTown_TalkToGirl{
+
+}
+
+script BrineshoreTown_TalkToMom{
+    lock
+    faceplayer
+    msgbox(MomBlockingDoor)
+    waitmessage
+    release
+}
+
+movement face_up{
+    face_up
+}
+
+movement face_right{
+    face_right
+}
+
+movement face_down{
+    face_down
+}
+
+movement walk_down{
+    walk_down
+}
+
+movement faceplayer{
+    faceplayer
+}
+
+text TownGuard_CannotLeave{
+    "Stop, it's too dangerous to leave\n"
+    "without a pokemon."
+}
+
+text FirstBattle_Intro{
+    "Let's make sure you have what it takes."
+}
+
+text FirstBattle_Outro{
+    "Ok..."
+}
+
+text FirstBattle_PostBattle{
+    "Good luck out there!"
+}
+
+text BoyCantSleep{
+    format("What...? Sorry, I haven't been able\nto sleep lately.\pI've been having too many nightmares.")
+    
+}
+
+text Tuber{
+    "Mommy has been spending a lot of time\n"
+    "building a new basement for us!"
+}
+
+text Girl{
+    "Daddy moved to the big city. He says you can't\n"
+    "make money here anymore after these rocks showed up."
+}
+
+text MomBlockingDoor{
+    format("Not right now, {PLAYER}, I'm waiting on the exterminator.")
+}
