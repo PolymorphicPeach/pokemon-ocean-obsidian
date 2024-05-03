@@ -91,54 +91,88 @@ BrineshoreTown_TalkToBoy::
 
 
 BrineshoreTown_TalkToTuber::
-	return
-
-
-BrineshoreTown_TalkToGirl::
-	return
-
-
-BrineshoreTown_TalkToMom::
-# 75 "data/maps/BrineshoreTown/scripts.pory"
+# 67 "data/maps/BrineshoreTown/scripts.pory"
 	lock
-# 76 "data/maps/BrineshoreTown/scripts.pory"
+# 68 "data/maps/BrineshoreTown/scripts.pory"
 	faceplayer
+# 69 "data/maps/BrineshoreTown/scripts.pory"
+	goto_if_unset FLAG_ITEM_BRINESHORE_SOFT_SAND, BrineshoreTown_TalkToTuber_2
+# 76 "data/maps/BrineshoreTown/scripts.pory"
+	msgbox Tuber
 # 77 "data/maps/BrineshoreTown/scripts.pory"
-	msgbox MomBlockingDoor
-# 78 "data/maps/BrineshoreTown/scripts.pory"
 	waitmessage
+BrineshoreTown_TalkToTuber_1:
 # 79 "data/maps/BrineshoreTown/scripts.pory"
 	release
 	return
 
+BrineshoreTown_TalkToTuber_2:
+# 70 "data/maps/BrineshoreTown/scripts.pory"
+	msgbox TuberGiveSoftSand
+# 71 "data/maps/BrineshoreTown/scripts.pory"
+	waitmessage
+# 72 "data/maps/BrineshoreTown/scripts.pory"
+	giveitem ITEM_SOFT_SAND
+# 73 "data/maps/BrineshoreTown/scripts.pory"
+	setflag FLAG_ITEM_BRINESHORE_SOFT_SAND
+	goto BrineshoreTown_TalkToTuber_1
 
-# 82 "data/maps/BrineshoreTown/scripts.pory"
-face_up:
+
+BrineshoreTown_TalkToGirl::
 # 83 "data/maps/BrineshoreTown/scripts.pory"
+	lock
+# 84 "data/maps/BrineshoreTown/scripts.pory"
+	faceplayer
+# 85 "data/maps/BrineshoreTown/scripts.pory"
+	msgbox Girl
+# 86 "data/maps/BrineshoreTown/scripts.pory"
+	waitmessage
+# 87 "data/maps/BrineshoreTown/scripts.pory"
+	release
+	return
+
+
+BrineshoreTown_TalkToMom::
+# 91 "data/maps/BrineshoreTown/scripts.pory"
+	lock
+# 92 "data/maps/BrineshoreTown/scripts.pory"
+	faceplayer
+# 93 "data/maps/BrineshoreTown/scripts.pory"
+	msgbox MomBlockingDoor
+# 94 "data/maps/BrineshoreTown/scripts.pory"
+	waitmessage
+# 95 "data/maps/BrineshoreTown/scripts.pory"
+	release
+	return
+
+
+# 98 "data/maps/BrineshoreTown/scripts.pory"
+face_up:
+# 99 "data/maps/BrineshoreTown/scripts.pory"
 	face_up
 	step_end
 
-# 86 "data/maps/BrineshoreTown/scripts.pory"
+# 102 "data/maps/BrineshoreTown/scripts.pory"
 face_right:
-# 87 "data/maps/BrineshoreTown/scripts.pory"
+# 103 "data/maps/BrineshoreTown/scripts.pory"
 	face_right
 	step_end
 
-# 90 "data/maps/BrineshoreTown/scripts.pory"
+# 106 "data/maps/BrineshoreTown/scripts.pory"
 face_down:
-# 91 "data/maps/BrineshoreTown/scripts.pory"
+# 107 "data/maps/BrineshoreTown/scripts.pory"
 	face_down
 	step_end
 
-# 94 "data/maps/BrineshoreTown/scripts.pory"
+# 110 "data/maps/BrineshoreTown/scripts.pory"
 walk_down:
-# 95 "data/maps/BrineshoreTown/scripts.pory"
+# 111 "data/maps/BrineshoreTown/scripts.pory"
 	walk_down
 	step_end
 
-# 98 "data/maps/BrineshoreTown/scripts.pory"
+# 114 "data/maps/BrineshoreTown/scripts.pory"
 faceplayer:
-# 99 "data/maps/BrineshoreTown/scripts.pory"
+# 115 "data/maps/BrineshoreTown/scripts.pory"
 	faceplayer
 	step_end
 
@@ -151,39 +185,45 @@ BrineshoreTown_Store_Text_1:
 	.string "Have a nice day!$"
 
 TownGuard_CannotLeave::
-# 102 "data/maps/BrineshoreTown/scripts.pory"
+# 118 "data/maps/BrineshoreTown/scripts.pory"
 	.string "Stop, it's too dangerous to leave\n"
 	.string "without a pokemon.$"
 
 FirstBattle_Intro::
-# 107 "data/maps/BrineshoreTown/scripts.pory"
+# 123 "data/maps/BrineshoreTown/scripts.pory"
 	.string "Let's make sure you have what it takes.$"
 
 FirstBattle_Outro::
-# 111 "data/maps/BrineshoreTown/scripts.pory"
+# 127 "data/maps/BrineshoreTown/scripts.pory"
 	.string "Ok...$"
 
 FirstBattle_PostBattle::
-# 115 "data/maps/BrineshoreTown/scripts.pory"
+# 131 "data/maps/BrineshoreTown/scripts.pory"
 	.string "Good luck out there!$"
 
 BoyCantSleep::
-# 119 "data/maps/BrineshoreTown/scripts.pory"
+# 135 "data/maps/BrineshoreTown/scripts.pory"
 	.string "What...? Sorry, I haven't been able\n"
 	.string "to sleep lately.\p"
 	.string "I've been having too many nightmares.$"
 
 Tuber::
-# 124 "data/maps/BrineshoreTown/scripts.pory"
+# 140 "data/maps/BrineshoreTown/scripts.pory"
 	.string "Mommy has been spending a lot of time\n"
 	.string "building a new basement for us!$"
 
+TuberGiveSoftSand::
+# 145 "data/maps/BrineshoreTown/scripts.pory"
+	.string "Awww, you're leaving soon? Here,\n"
+	.string "take this to remember us by!$"
+
 Girl::
-# 129 "data/maps/BrineshoreTown/scripts.pory"
-	.string "Daddy moved to the big city. He says you can't\n"
-	.string "make money here anymore after these rocks showed up.$"
+# 150 "data/maps/BrineshoreTown/scripts.pory"
+	.string "Daddy moved to the big city.\p"
+	.string "He says you can't make money here\n"
+	.string "ever since the rocks showed up.$"
 
 MomBlockingDoor::
-# 134 "data/maps/BrineshoreTown/scripts.pory"
+# 156 "data/maps/BrineshoreTown/scripts.pory"
 	.string "Not right now, {PLAYER},\n"
 	.string "I'm waiting on the exterminator.$"

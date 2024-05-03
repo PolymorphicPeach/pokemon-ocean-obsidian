@@ -64,11 +64,27 @@ script BrineshoreTown_TalkToBoy{
 }
 
 script BrineshoreTown_TalkToTuber{
-
+    lock
+    faceplayer
+    if(!flag(FLAG_ITEM_BRINESHORE_SOFT_SAND)){
+        msgbox(TuberGiveSoftSand)
+        waitmessage
+        giveitem(ITEM_SOFT_SAND)
+        setflag(FLAG_ITEM_BRINESHORE_SOFT_SAND)
+    }
+    else{
+        msgbox(Tuber)
+        waitmessage
+    }
+    release
 }
 
 script BrineshoreTown_TalkToGirl{
-
+    lock
+    faceplayer
+    msgbox(Girl)
+    waitmessage
+    release
 }
 
 script BrineshoreTown_TalkToMom{
@@ -126,9 +142,15 @@ text Tuber{
     "building a new basement for us!"
 }
 
+text TuberGiveSoftSand{
+    format("Awww, you're leaving soon? Here,\n"
+            "take this to remember us by!")
+}
+
 text Girl{
-    "Daddy moved to the big city. He says you can't\n"
-    "make money here anymore after these rocks showed up."
+    "Daddy moved to the big city.\p"
+    "He says you can't make money here\n"
+    "ever since the rocks showed up."
 }
 
 text MomBlockingDoor{

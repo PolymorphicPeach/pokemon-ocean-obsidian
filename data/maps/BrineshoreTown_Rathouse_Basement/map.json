@@ -19,7 +19,7 @@
   "warp_events": [
     {
       "x": 4,
-      "y": 7,
+      "y": 6,
       "elevation": 0,
       "dest_map": "MAP_BRINESHORE_TOWN_RATHOUSE",
       "dest_warp_id": "2"

@@ -1,852 +1,428 @@
-# 1 "data/scripts/abnormal_weather.pory"
-
-# 2 "data/scripts/abnormal_weather.pory"
+raw `
 AbnormalWeather_EventScript_PlaceTilesRoute114North::
-# 3 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 3, METATILE_Fallarbor_RedCaveEntrance_Top, TRUE
-# 4 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 4, METATILE_Fallarbor_RedCaveEntrance_Bottom, FALSE
-# 5 "data/scripts/abnormal_weather.pory"
 	return
-# 6 "data/scripts/abnormal_weather.pory"
 
-# 7 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute114South::
-# 8 "data/scripts/abnormal_weather.pory"
 	setmetatile 6, 45, METATILE_Fallarbor_BrownCaveEntrance_Top, TRUE
-# 9 "data/scripts/abnormal_weather.pory"
 	setmetatile 6, 46, METATILE_Fallarbor_BrownCaveEntrance_Bottom, FALSE
-# 10 "data/scripts/abnormal_weather.pory"
 	return
-# 11 "data/scripts/abnormal_weather.pory"
 
-# 12 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute115West::
-# 13 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 5, METATILE_Fallarbor_BrownCaveEntrance_Top, TRUE
-# 14 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 6, METATILE_Fallarbor_BrownCaveEntrance_Bottom, FALSE
-# 15 "data/scripts/abnormal_weather.pory"
 	return
-# 16 "data/scripts/abnormal_weather.pory"
 
-# 17 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute115East::
-# 18 "data/scripts/abnormal_weather.pory"
 	setmetatile 36, 9, METATILE_Fallarbor_BrownCaveEntrance_Top, TRUE
-# 19 "data/scripts/abnormal_weather.pory"
 	setmetatile 36, 10, METATILE_Fallarbor_BrownCaveEntrance_Bottom, FALSE
-# 20 "data/scripts/abnormal_weather.pory"
 	return
-# 21 "data/scripts/abnormal_weather.pory"
 
-# 22 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute116North::
-# 23 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 12, METATILE_General_CaveEntrance_Top, TRUE
-# 24 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 13, METATILE_General_CaveEntrance_Bottom, FALSE
-# 25 "data/scripts/abnormal_weather.pory"
 	return
-# 26 "data/scripts/abnormal_weather.pory"
 
-# 27 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute116South::
-# 28 "data/scripts/abnormal_weather.pory"
 	setmetatile 79, 5, METATILE_General_CaveEntrance_Top, TRUE
-# 29 "data/scripts/abnormal_weather.pory"
 	setmetatile 79, 6, METATILE_General_CaveEntrance_Bottom, FALSE
-# 30 "data/scripts/abnormal_weather.pory"
 	return
-# 31 "data/scripts/abnormal_weather.pory"
 
-# 32 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute118East::
-# 33 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 5, METATILE_General_CaveEntrance_Top, TRUE
-# 34 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 6, METATILE_General_CaveEntrance_Bottom, FALSE
-# 35 "data/scripts/abnormal_weather.pory"
 	return
-# 36 "data/scripts/abnormal_weather.pory"
 
-# 37 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute118West::
-# 38 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 5, METATILE_General_CaveEntrance_Top, TRUE
-# 39 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 6, METATILE_General_CaveEntrance_Bottom, FALSE
-# 40 "data/scripts/abnormal_weather.pory"
 	return
-# 41 "data/scripts/abnormal_weather.pory"
 
-# 42 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute105North::
-# 43 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 28, METATILE_General_RoughWater, FALSE
-# 44 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 28, METATILE_General_RoughWater, FALSE
-# 45 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 29, METATILE_General_RoughWater, FALSE
-# 46 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 29, METATILE_General_RoughDeepWater, FALSE
-# 47 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 29, METATILE_General_RoughDeepWater, FALSE
-# 48 "data/scripts/abnormal_weather.pory"
 	setmetatile 12, 29, METATILE_General_RoughWater, FALSE
-# 49 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 30, METATILE_General_RoughWater, FALSE
-# 50 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 30, METATILE_General_RoughDeepWater, FALSE
-# 51 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 30, METATILE_General_RoughDeepWater, FALSE
-# 52 "data/scripts/abnormal_weather.pory"
 	setmetatile 12, 30, METATILE_General_RoughWater, FALSE
-# 53 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 31, METATILE_General_RoughWater, FALSE
-# 54 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 31, METATILE_General_RoughWater, FALSE
-# 55 "data/scripts/abnormal_weather.pory"
 	return
-# 56 "data/scripts/abnormal_weather.pory"
 
-# 57 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute105South::
-# 58 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 53, METATILE_General_RoughWater, FALSE
-# 59 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 53, METATILE_General_RoughWater, FALSE
-# 60 "data/scripts/abnormal_weather.pory"
 	setmetatile 19, 54, METATILE_General_RoughWater, FALSE
-# 61 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 54, METATILE_General_RoughDeepWater, FALSE
-# 62 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 54, METATILE_General_RoughDeepWater, FALSE
-# 63 "data/scripts/abnormal_weather.pory"
 	setmetatile 22, 54, METATILE_General_RoughWater, FALSE
-# 64 "data/scripts/abnormal_weather.pory"
 	setmetatile 19, 55, METATILE_General_RoughWater, FALSE
-# 65 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 55, METATILE_General_RoughDeepWater, FALSE
-# 66 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 55, METATILE_General_RoughDeepWater, FALSE
-# 67 "data/scripts/abnormal_weather.pory"
 	setmetatile 22, 55, METATILE_General_RoughWater, FALSE
-# 68 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 56, METATILE_General_RoughWater, FALSE
-# 69 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 56, METATILE_General_RoughWater, FALSE
-# 70 "data/scripts/abnormal_weather.pory"
 	return
-# 71 "data/scripts/abnormal_weather.pory"
 
-# 72 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute125West::
-# 73 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 16, METATILE_General_RoughWater, FALSE
-# 74 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 16, METATILE_General_RoughWater, FALSE
-# 75 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 17, METATILE_General_RoughWater, FALSE
-# 76 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 17, METATILE_General_RoughDeepWater, FALSE
-# 77 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 17, METATILE_General_RoughDeepWater, FALSE
-# 78 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 17, METATILE_General_RoughWater, FALSE
-# 79 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 18, METATILE_General_RoughWater, FALSE
-# 80 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 18, METATILE_General_RoughDeepWater, FALSE
-# 81 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 18, METATILE_General_RoughDeepWater, FALSE
-# 82 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 18, METATILE_General_RoughWater, FALSE
-# 83 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 19, METATILE_General_RoughWater, FALSE
-# 84 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 19, METATILE_General_RoughWater, FALSE
-# 85 "data/scripts/abnormal_weather.pory"
 	return
-# 86 "data/scripts/abnormal_weather.pory"
 
-# 87 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute125East::
-# 88 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 18, METATILE_General_RoughWater, FALSE
-# 89 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 18, METATILE_General_RoughWater, FALSE
-# 90 "data/scripts/abnormal_weather.pory"
 	setmetatile 52, 19, METATILE_General_RoughWater, FALSE
-# 91 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 19, METATILE_General_RoughDeepWater, FALSE
-# 92 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 19, METATILE_General_RoughDeepWater, FALSE
-# 93 "data/scripts/abnormal_weather.pory"
 	setmetatile 55, 19, METATILE_General_RoughWater, FALSE
-# 94 "data/scripts/abnormal_weather.pory"
 	setmetatile 52, 20, METATILE_General_RoughWater, FALSE
-# 95 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 20, METATILE_General_RoughDeepWater, FALSE
-# 96 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 20, METATILE_General_RoughDeepWater, FALSE
-# 97 "data/scripts/abnormal_weather.pory"
 	setmetatile 55, 20, METATILE_General_RoughWater, FALSE
-# 98 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 21, METATILE_General_RoughWater, FALSE
-# 99 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 21, METATILE_General_RoughWater, FALSE
-# 100 "data/scripts/abnormal_weather.pory"
 	return
-# 101 "data/scripts/abnormal_weather.pory"
 
-# 102 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute127North::
-# 103 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 9, METATILE_General_RoughWater, FALSE
-# 104 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 9, METATILE_General_RoughWater, FALSE
-# 105 "data/scripts/abnormal_weather.pory"
 	setmetatile 56, 10, METATILE_General_RoughWater, FALSE
-# 106 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 10, METATILE_General_RoughDeepWater, FALSE
-# 107 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 10, METATILE_General_RoughDeepWater, FALSE
-# 108 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 10, METATILE_General_RoughWater, FALSE
-# 109 "data/scripts/abnormal_weather.pory"
 	setmetatile 56, 11, METATILE_General_RoughWater, FALSE
-# 110 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 11, METATILE_General_RoughDeepWater, FALSE
-# 111 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 11, METATILE_General_RoughDeepWater, FALSE
-# 112 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 11, METATILE_General_RoughWater, FALSE
-# 113 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 12, METATILE_General_RoughWater, FALSE
-# 114 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 12, METATILE_General_RoughWater, FALSE
-# 115 "data/scripts/abnormal_weather.pory"
 	return
-# 116 "data/scripts/abnormal_weather.pory"
 
-# 117 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute127South::
-# 118 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 30, METATILE_General_RoughWater, FALSE
-# 119 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 30, METATILE_General_RoughWater, FALSE
-# 120 "data/scripts/abnormal_weather.pory"
 	setmetatile 60, 31, METATILE_General_RoughWater, FALSE
-# 121 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 31, METATILE_General_RoughDeepWater, FALSE
-# 122 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 31, METATILE_General_RoughDeepWater, FALSE
-# 123 "data/scripts/abnormal_weather.pory"
 	setmetatile 63, 31, METATILE_General_RoughWater, FALSE
-# 124 "data/scripts/abnormal_weather.pory"
 	setmetatile 60, 32, METATILE_General_RoughWater, FALSE
-# 125 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 32, METATILE_General_RoughDeepWater, FALSE
-# 126 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 32, METATILE_General_RoughDeepWater, FALSE
-# 127 "data/scripts/abnormal_weather.pory"
 	setmetatile 63, 32, METATILE_General_RoughWater, FALSE
-# 128 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 33, METATILE_General_RoughWater, FALSE
-# 129 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 33, METATILE_General_RoughWater, FALSE
-# 130 "data/scripts/abnormal_weather.pory"
 	return
-# 131 "data/scripts/abnormal_weather.pory"
 
-# 132 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute129West::
-# 133 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 14, METATILE_General_RoughWater, FALSE
-# 134 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 14, METATILE_General_RoughWater, FALSE
-# 135 "data/scripts/abnormal_weather.pory"
 	setmetatile 15, 15, METATILE_General_RoughWater, FALSE
-# 136 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 15, METATILE_General_RoughDeepWater, FALSE
-# 137 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 15, METATILE_General_RoughDeepWater, FALSE
-# 138 "data/scripts/abnormal_weather.pory"
 	setmetatile 18, 15, METATILE_General_RoughWater, FALSE
-# 139 "data/scripts/abnormal_weather.pory"
 	setmetatile 15, 16, METATILE_General_RoughWater, FALSE
-# 140 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 16, METATILE_General_RoughDeepWater, FALSE
-# 141 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 16, METATILE_General_RoughDeepWater, FALSE
-# 142 "data/scripts/abnormal_weather.pory"
 	setmetatile 18, 16, METATILE_General_RoughWater, FALSE
-# 143 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 17, METATILE_General_RoughWater, FALSE
-# 144 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 17, METATILE_General_RoughWater, FALSE
-# 145 "data/scripts/abnormal_weather.pory"
 	return
-# 146 "data/scripts/abnormal_weather.pory"
 
-# 147 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_PlaceTilesRoute129East::
-# 148 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 19, METATILE_General_RoughWater, FALSE
-# 149 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 19, METATILE_General_RoughWater, FALSE
-# 150 "data/scripts/abnormal_weather.pory"
 	setmetatile 41, 20, METATILE_General_RoughWater, FALSE
-# 151 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 20, METATILE_General_RoughDeepWater, FALSE
-# 152 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 20, METATILE_General_RoughDeepWater, FALSE
-# 153 "data/scripts/abnormal_weather.pory"
 	setmetatile 44, 20, METATILE_General_RoughWater, FALSE
-# 154 "data/scripts/abnormal_weather.pory"
 	setmetatile 41, 21, METATILE_General_RoughWater, FALSE
-# 155 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 21, METATILE_General_RoughDeepWater, FALSE
-# 156 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 21, METATILE_General_RoughDeepWater, FALSE
-# 157 "data/scripts/abnormal_weather.pory"
 	setmetatile 44, 21, METATILE_General_RoughWater, FALSE
-# 158 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 22, METATILE_General_RoughWater, FALSE
-# 159 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 22, METATILE_General_RoughWater, FALSE
-# 160 "data/scripts/abnormal_weather.pory"
 	return
-# 161 "data/scripts/abnormal_weather.pory"
 
-# 162 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_HideMapNamePopup::
-# 163 "data/scripts/abnormal_weather.pory"
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-# 164 "data/scripts/abnormal_weather.pory"
 	return
-# 165 "data/scripts/abnormal_weather.pory"
 
-# 166 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_StartKyogreWeather::
-# 167 "data/scripts/abnormal_weather.pory"
 	setweather WEATHER_DOWNPOUR
-# 168 "data/scripts/abnormal_weather.pory"
 	return
-# 169 "data/scripts/abnormal_weather.pory"
 
-# 170 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_StartGroudonWeather::
-# 171 "data/scripts/abnormal_weather.pory"
 	setweather WEATHER_DROUGHT
-# 172 "data/scripts/abnormal_weather.pory"
 	return
-# 173 "data/scripts/abnormal_weather.pory"
 
-# 174 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_EndEventAndCleanup_1::
-# 175 "data/scripts/abnormal_weather.pory"
 	lockall
-# 176 "data/scripts/abnormal_weather.pory"
 	goto_if_ge VAR_ABNORMAL_WEATHER_LOCATION, MARINE_CAVE_LOCATIONS_START, AbnormalWeather_EventScript_ShowRainEndedMessage
-# 177 "data/scripts/abnormal_weather.pory"
 	goto AbnormalWeather_EventScript_ShowSunEndedMessage
-# 178 "data/scripts/abnormal_weather.pory"
 	end
-# 179 "data/scripts/abnormal_weather.pory"
 
-# 180 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_EndEventAndCleanup_2::
-# 181 "data/scripts/abnormal_weather.pory"
 	closemessage
-# 182 "data/scripts/abnormal_weather.pory"
 	fadescreenswapbuffers FADE_TO_BLACK
-# 183 "data/scripts/abnormal_weather.pory"
 	setweather WEATHER_SUNNY
-# 184 "data/scripts/abnormal_weather.pory"
 	doweather
-# 185 "data/scripts/abnormal_weather.pory"
 	call AbnormalWeather_EventScript_CleanupMapTiles
-# 186 "data/scripts/abnormal_weather.pory"
 	special DrawWholeMapView
-# 187 "data/scripts/abnormal_weather.pory"
 	setvar VAR_ABNORMAL_WEATHER_LOCATION, ABNORMAL_WEATHER_NONE
-# 188 "data/scripts/abnormal_weather.pory"
 	setvar VAR_SHOULD_END_ABNORMAL_WEATHER, 0
-# 189 "data/scripts/abnormal_weather.pory"
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-# 190 "data/scripts/abnormal_weather.pory"
 	fadescreenswapbuffers FADE_FROM_BLACK
-# 191 "data/scripts/abnormal_weather.pory"
 	releaseall
-# 192 "data/scripts/abnormal_weather.pory"
 	end
-# 193 "data/scripts/abnormal_weather.pory"
 
-# 194 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_ShowRainEndedMessage::
-# 195 "data/scripts/abnormal_weather.pory"
 	msgbox gText_AbnormalWeatherEnded_Rain, MSGBOX_DEFAULT
-# 196 "data/scripts/abnormal_weather.pory"
 	goto AbnormalWeather_EventScript_EndEventAndCleanup_2
-# 197 "data/scripts/abnormal_weather.pory"
 	end
-# 198 "data/scripts/abnormal_weather.pory"
 
-# 199 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_ShowSunEndedMessage::
-# 200 "data/scripts/abnormal_weather.pory"
 	msgbox gText_AbnormalWeatherEnded_Sun, MSGBOX_DEFAULT
-# 201 "data/scripts/abnormal_weather.pory"
 	goto AbnormalWeather_EventScript_EndEventAndCleanup_2
-# 202 "data/scripts/abnormal_weather.pory"
 	end
-# 203 "data/scripts/abnormal_weather.pory"
 
-# 204 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupMapTiles::
-# 205 "data/scripts/abnormal_weather.pory"
 	switch VAR_ABNORMAL_WEATHER_LOCATION
-# 206 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_114_NORTH, AbnormalWeather_EventScript_CleanupRoute114North
-# 207 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_114_SOUTH, AbnormalWeather_EventScript_CleanupRoute114South
-# 208 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_115_WEST, AbnormalWeather_EventScript_CleanupRoute115West
-# 209 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_115_EAST, AbnormalWeather_EventScript_CleanupRoute115East
-# 210 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_116_NORTH, AbnormalWeather_EventScript_CleanupRoute116North
-# 211 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_116_SOUTH, AbnormalWeather_EventScript_CleanupRoute116South
-# 212 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_118_EAST, AbnormalWeather_EventScript_CleanupRoute118East
-# 213 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_118_WEST, AbnormalWeather_EventScript_CleanupRoute118West
-# 214 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_105_NORTH, AbnormalWeather_EventScript_CleanupRoute105North
-# 215 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_105_SOUTH, AbnormalWeather_EventScript_CleanupRoute105South
-# 216 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_125_WEST, AbnormalWeather_EventScript_CleanupRoute125West
-# 217 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_125_EAST, AbnormalWeather_EventScript_CleanupRoute125East
-# 218 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_127_NORTH, AbnormalWeather_EventScript_CleanupRoute127North
-# 219 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_127_SOUTH, AbnormalWeather_EventScript_CleanupRoute127South
-# 220 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_129_WEST, AbnormalWeather_EventScript_CleanupRoute129West
-# 221 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_129_EAST, AbnormalWeather_EventScript_CleanupRoute129East
-# 222 "data/scripts/abnormal_weather.pory"
 	return
-# 223 "data/scripts/abnormal_weather.pory"
 
-# 224 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute114North::
-# 225 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 3, METATILE_Fallarbor_RedRockWall, TRUE
-# 226 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 4, METATILE_Fallarbor_RedRockWall, TRUE
-# 227 "data/scripts/abnormal_weather.pory"
 	return
-# 228 "data/scripts/abnormal_weather.pory"
 
-# 229 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute114South::
-# 230 "data/scripts/abnormal_weather.pory"
 	setmetatile 6, 45, METATILE_Fallarbor_BrownRockWall, TRUE
-# 231 "data/scripts/abnormal_weather.pory"
 	setmetatile 6, 46, METATILE_Fallarbor_BrownRockWall, TRUE
-# 232 "data/scripts/abnormal_weather.pory"
 	return
-# 233 "data/scripts/abnormal_weather.pory"
 
-# 234 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute115West::
-# 235 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 5, METATILE_Fallarbor_BrownRockWall, TRUE
-# 236 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 6, METATILE_Fallarbor_BrownRockWall, TRUE
-# 237 "data/scripts/abnormal_weather.pory"
 	return
-# 238 "data/scripts/abnormal_weather.pory"
 
-# 239 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute115East::
-# 240 "data/scripts/abnormal_weather.pory"
 	setmetatile 36, 9, METATILE_Fallarbor_BrownRockWall, TRUE
-# 241 "data/scripts/abnormal_weather.pory"
 	setmetatile 36, 10, METATILE_Fallarbor_BrownRockWall, TRUE
-# 242 "data/scripts/abnormal_weather.pory"
 	return
-# 243 "data/scripts/abnormal_weather.pory"
 
-# 244 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute116North::
-# 245 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 12, METATILE_General_RockWall_RockBase, TRUE
-# 246 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 13, METATILE_General_RockWall_RockBase, TRUE
-# 247 "data/scripts/abnormal_weather.pory"
 	return
-# 248 "data/scripts/abnormal_weather.pory"
 
-# 249 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute116South::
-# 250 "data/scripts/abnormal_weather.pory"
 	setmetatile 79, 5, METATILE_General_RockWall_RockBase, TRUE
-# 251 "data/scripts/abnormal_weather.pory"
 	setmetatile 79, 6, METATILE_General_RockWall_RockBase, TRUE
-# 252 "data/scripts/abnormal_weather.pory"
 	return
-# 253 "data/scripts/abnormal_weather.pory"
 
-# 254 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute118East::
-# 255 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 5, METATILE_General_RockWall_RockBase, TRUE
-# 256 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 6, METATILE_General_RockWall_GrassBase, TRUE
-# 257 "data/scripts/abnormal_weather.pory"
 	return
-# 258 "data/scripts/abnormal_weather.pory"
 
-# 259 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute118West::
-# 260 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 5, METATILE_General_RockWall_RockBase, TRUE
-# 261 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 6, METATILE_General_RockWall_GrassBase, TRUE
-# 262 "data/scripts/abnormal_weather.pory"
 	return
-# 263 "data/scripts/abnormal_weather.pory"
 
-# 264 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute105North::
-# 265 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 28, METATILE_General_CalmWater, FALSE
-# 266 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 28, METATILE_General_CalmWater, FALSE
-# 267 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 29, METATILE_General_CalmWater, FALSE
-# 268 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 29, METATILE_General_CalmWater, FALSE
-# 269 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 29, METATILE_General_CalmWater, FALSE
-# 270 "data/scripts/abnormal_weather.pory"
 	setmetatile 12, 29, METATILE_General_CalmWater, FALSE
-# 271 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 30, METATILE_General_CalmWater, FALSE
-# 272 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 30, METATILE_General_CalmWater, FALSE
-# 273 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 30, METATILE_General_CalmWater, FALSE
-# 274 "data/scripts/abnormal_weather.pory"
 	setmetatile 12, 30, METATILE_General_CalmWater, FALSE
-# 275 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 31, METATILE_General_CalmWater, FALSE
-# 276 "data/scripts/abnormal_weather.pory"
 	setmetatile 11, 31, METATILE_General_CalmWater, FALSE
-# 277 "data/scripts/abnormal_weather.pory"
 	return
-# 278 "data/scripts/abnormal_weather.pory"
 
-# 279 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute105South::
-# 280 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 53, METATILE_General_CalmWater, FALSE
-# 281 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 53, METATILE_General_CalmWater, FALSE
-# 282 "data/scripts/abnormal_weather.pory"
 	setmetatile 19, 54, METATILE_General_CalmWater, FALSE
-# 283 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 54, METATILE_General_CalmWater, FALSE
-# 284 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 54, METATILE_General_CalmWater, FALSE
-# 285 "data/scripts/abnormal_weather.pory"
 	setmetatile 22, 54, METATILE_General_CalmWater, FALSE
-# 286 "data/scripts/abnormal_weather.pory"
 	setmetatile 19, 55, METATILE_General_CalmWater, FALSE
-# 287 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 55, METATILE_General_CalmWater, FALSE
-# 288 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 55, METATILE_General_CalmWater, FALSE
-# 289 "data/scripts/abnormal_weather.pory"
 	setmetatile 22, 55, METATILE_General_CalmWater, FALSE
-# 290 "data/scripts/abnormal_weather.pory"
 	setmetatile 20, 56, METATILE_General_CalmWater, FALSE
-# 291 "data/scripts/abnormal_weather.pory"
 	setmetatile 21, 56, METATILE_General_CalmWater, FALSE
-# 292 "data/scripts/abnormal_weather.pory"
 	return
-# 293 "data/scripts/abnormal_weather.pory"
 
-# 294 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute125West::
-# 295 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 16, METATILE_General_CalmWater, FALSE
-# 296 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 16, METATILE_General_CalmWater, FALSE
-# 297 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 17, METATILE_General_CalmWater, FALSE
-# 298 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 17, METATILE_General_CalmWater, FALSE
-# 299 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 17, METATILE_General_CalmWater, FALSE
-# 300 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 17, METATILE_General_CalmWater, FALSE
-# 301 "data/scripts/abnormal_weather.pory"
 	setmetatile 7, 18, METATILE_General_CalmWater, FALSE
-# 302 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 18, METATILE_General_CalmWater, FALSE
-# 303 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 18, METATILE_General_CalmWater, FALSE
-# 304 "data/scripts/abnormal_weather.pory"
 	setmetatile 10, 18, METATILE_General_CalmWater, FALSE
-# 305 "data/scripts/abnormal_weather.pory"
 	setmetatile 8, 19, METATILE_General_CalmWater, FALSE
-# 306 "data/scripts/abnormal_weather.pory"
 	setmetatile 9, 19, METATILE_General_CalmWater, FALSE
-# 307 "data/scripts/abnormal_weather.pory"
 	return
-# 308 "data/scripts/abnormal_weather.pory"
 
-# 309 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute125East::
-# 310 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 18, METATILE_General_CalmWater, FALSE
-# 311 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 18, METATILE_General_CalmWater, FALSE
-# 312 "data/scripts/abnormal_weather.pory"
 	setmetatile 52, 19, METATILE_General_CalmWater, FALSE
-# 313 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 19, METATILE_General_CalmWater, FALSE
-# 314 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 19, METATILE_General_CalmWater, FALSE
-# 315 "data/scripts/abnormal_weather.pory"
 	setmetatile 55, 19, METATILE_General_CalmWater, FALSE
-# 316 "data/scripts/abnormal_weather.pory"
 	setmetatile 52, 20, METATILE_General_CalmWater, FALSE
-# 317 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 20, METATILE_General_CalmWater, FALSE
-# 318 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 20, METATILE_General_CalmWater, FALSE
-# 319 "data/scripts/abnormal_weather.pory"
 	setmetatile 55, 20, METATILE_General_CalmWater, FALSE
-# 320 "data/scripts/abnormal_weather.pory"
 	setmetatile 53, 21, METATILE_General_CalmWater, FALSE
-# 321 "data/scripts/abnormal_weather.pory"
 	setmetatile 54, 21, METATILE_General_CalmWater, FALSE
-# 322 "data/scripts/abnormal_weather.pory"
 	return
-# 323 "data/scripts/abnormal_weather.pory"
 
-# 324 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute127North::
-# 325 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 9, METATILE_General_CalmWater, FALSE
-# 326 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 9, METATILE_General_CalmWater, FALSE
-# 327 "data/scripts/abnormal_weather.pory"
 	setmetatile 56, 10, METATILE_General_CalmWater, FALSE
-# 328 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 10, METATILE_General_CalmWater, FALSE
-# 329 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 10, METATILE_General_CalmWater, FALSE
-# 330 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 10, METATILE_General_CalmWater, FALSE
-# 331 "data/scripts/abnormal_weather.pory"
 	setmetatile 56, 11, METATILE_General_CalmWater, FALSE
-# 332 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 11, METATILE_General_CalmWater, FALSE
-# 333 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 11, METATILE_General_CalmWater, FALSE
-# 334 "data/scripts/abnormal_weather.pory"
 	setmetatile 59, 11, METATILE_General_CalmWater, FALSE
-# 335 "data/scripts/abnormal_weather.pory"
 	setmetatile 57, 12, METATILE_General_CalmWater, FALSE
-# 336 "data/scripts/abnormal_weather.pory"
 	setmetatile 58, 12, METATILE_General_CalmWater, FALSE
-# 337 "data/scripts/abnormal_weather.pory"
 	return
-# 338 "data/scripts/abnormal_weather.pory"
 
-# 339 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute127South::
-# 340 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 30, METATILE_General_CalmWater, FALSE
-# 341 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 30, METATILE_General_CalmWater, FALSE
-# 342 "data/scripts/abnormal_weather.pory"
 	setmetatile 60, 31, METATILE_General_CalmWater, FALSE
-# 343 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 31, METATILE_General_CalmWater, FALSE
-# 344 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 31, METATILE_General_CalmWater, FALSE
-# 345 "data/scripts/abnormal_weather.pory"
 	setmetatile 63, 31, METATILE_General_CalmWater, FALSE
-# 346 "data/scripts/abnormal_weather.pory"
 	setmetatile 60, 32, METATILE_General_CalmWater, FALSE
-# 347 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 32, METATILE_General_CalmWater, FALSE
-# 348 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 32, METATILE_General_CalmWater, FALSE
-# 349 "data/scripts/abnormal_weather.pory"
 	setmetatile 63, 32, METATILE_General_CalmWater, FALSE
-# 350 "data/scripts/abnormal_weather.pory"
 	setmetatile 61, 33, METATILE_General_CalmWater, FALSE
-# 351 "data/scripts/abnormal_weather.pory"
 	setmetatile 62, 33, METATILE_General_CalmWater, FALSE
-# 352 "data/scripts/abnormal_weather.pory"
 	return
-# 353 "data/scripts/abnormal_weather.pory"
 
-# 354 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute129West::
-# 355 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 14, METATILE_General_CalmWater, FALSE
-# 356 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 14, METATILE_General_CalmWater, FALSE
-# 357 "data/scripts/abnormal_weather.pory"
 	setmetatile 15, 15, METATILE_General_CalmWater, FALSE
-# 358 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 15, METATILE_General_CalmWater, FALSE
-# 359 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 15, METATILE_General_CalmWater, FALSE
-# 360 "data/scripts/abnormal_weather.pory"
 	setmetatile 18, 15, METATILE_General_CalmWater, FALSE
-# 361 "data/scripts/abnormal_weather.pory"
 	setmetatile 15, 16, METATILE_General_CalmWater, FALSE
-# 362 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 16, METATILE_General_CalmWater, FALSE
-# 363 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 16, METATILE_General_CalmWater, FALSE
-# 364 "data/scripts/abnormal_weather.pory"
 	setmetatile 18, 16, METATILE_General_CalmWater, FALSE
-# 365 "data/scripts/abnormal_weather.pory"
 	setmetatile 16, 17, METATILE_General_CalmWater, FALSE
-# 366 "data/scripts/abnormal_weather.pory"
 	setmetatile 17, 17, METATILE_General_CalmWater, FALSE
-# 367 "data/scripts/abnormal_weather.pory"
 	return
-# 368 "data/scripts/abnormal_weather.pory"
 
-# 369 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_EventScript_CleanupRoute129East::
-# 370 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 19, METATILE_General_CalmWater, FALSE
-# 371 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 19, METATILE_General_CalmWater, FALSE
-# 372 "data/scripts/abnormal_weather.pory"
 	setmetatile 41, 20, METATILE_General_CalmWater, FALSE
-# 373 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 20, METATILE_General_CalmWater, FALSE
-# 374 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 20, METATILE_General_CalmWater, FALSE
-# 375 "data/scripts/abnormal_weather.pory"
 	setmetatile 44, 20, METATILE_General_CalmWater, FALSE
-# 376 "data/scripts/abnormal_weather.pory"
 	setmetatile 41, 21, METATILE_General_CalmWater, FALSE
-# 377 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 21, METATILE_General_CalmWater, FALSE
-# 378 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 21, METATILE_General_CalmWater, FALSE
-# 379 "data/scripts/abnormal_weather.pory"
 	setmetatile 44, 21, METATILE_General_CalmWater, FALSE
-# 380 "data/scripts/abnormal_weather.pory"
 	setmetatile 42, 22, METATILE_General_CalmWater, FALSE
-# 381 "data/scripts/abnormal_weather.pory"
 	setmetatile 43, 22, METATILE_General_CalmWater, FALSE
-# 382 "data/scripts/abnormal_weather.pory"
 	return
-# 383 "data/scripts/abnormal_weather.pory"
 
-# 384 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarp::
-# 385 "data/scripts/abnormal_weather.pory"
 	switch VAR_ABNORMAL_WEATHER_LOCATION
-# 386 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_105_NORTH, AbnormalWeather_Underwater_SetupEscapeWarpRoute105North
-# 387 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_105_SOUTH, AbnormalWeather_Underwater_SetupEscapeWarpRoute105South
-# 388 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_125_WEST, AbnormalWeather_Underwater_SetupEscapeWarpRoute125West
-# 389 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_125_EAST, AbnormalWeather_Underwater_SetupEscapeWarpRoute125East
-# 390 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_127_NORTH, AbnormalWeather_Underwater_SetupEscapeWarpRoute127North
-# 391 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_127_SOUTH, AbnormalWeather_Underwater_SetupEscapeWarpRoute127South
-# 392 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_129_WEST, AbnormalWeather_Underwater_SetupEscapeWarpRoute129West
-# 393 "data/scripts/abnormal_weather.pory"
 	case ABNORMAL_WEATHER_ROUTE_129_EAST, AbnormalWeather_Underwater_SetupEscapeWarpRoute129East
-# 394 "data/scripts/abnormal_weather.pory"
 	return
-# 395 "data/scripts/abnormal_weather.pory"
 
-# 396 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute105North::
-# 397 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE105, 11, 29
-# 398 "data/scripts/abnormal_weather.pory"
 	return
-# 399 "data/scripts/abnormal_weather.pory"
 
-# 400 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute105South::
-# 401 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE105, 21, 54
-# 402 "data/scripts/abnormal_weather.pory"
 	return
-# 403 "data/scripts/abnormal_weather.pory"
 
-# 404 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute125West::
-# 405 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE125, 9, 17
-# 406 "data/scripts/abnormal_weather.pory"
 	return
-# 407 "data/scripts/abnormal_weather.pory"
 
-# 408 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute125East::
-# 409 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE125, 54, 19
-# 410 "data/scripts/abnormal_weather.pory"
 	return
-# 411 "data/scripts/abnormal_weather.pory"
 
-# 412 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute127North::
-# 413 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE127, 58, 10
-# 414 "data/scripts/abnormal_weather.pory"
 	return
-# 415 "data/scripts/abnormal_weather.pory"
 
-# 416 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute127South::
-# 417 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE127, 62, 31
-# 418 "data/scripts/abnormal_weather.pory"
 	return
-# 419 "data/scripts/abnormal_weather.pory"
 
-# 420 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute129West::
-# 421 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE129, 17, 15
-# 422 "data/scripts/abnormal_weather.pory"
 	return
-# 423 "data/scripts/abnormal_weather.pory"
 
-# 424 "data/scripts/abnormal_weather.pory"
 AbnormalWeather_Underwater_SetupEscapeWarpRoute129East::
-# 425 "data/scripts/abnormal_weather.pory"
 	setescapewarp MAP_ROUTE129, 43, 20
-# 426 "data/scripts/abnormal_weather.pory"
 	return
+
+`

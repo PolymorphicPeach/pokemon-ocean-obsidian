@@ -363,7 +363,8 @@ BrineshoreTown_Lab_TalkToProfessor_Text_0:
 
 StandardProfessorText::
 # 210 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Go ahead and choose a Pokemon,\n"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Go ahead and choose a\n"
+	.string "Pokemon,\n"
 	.string "I need to get this delivery sorted.\p"
 	.string "$"
 
@@ -393,7 +394,8 @@ TakeYew::
 # 237 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Assistant Yew has yet to\n"
 	.string "pass the POPME.\p"
-	.string "You'll be taking him north with you to the\n"
+	.string "You'll be taking him north with you to\n"
+	.string "the\n"
 	.string "Academy where he can take the exam.$"
 
 GivePokedex::
