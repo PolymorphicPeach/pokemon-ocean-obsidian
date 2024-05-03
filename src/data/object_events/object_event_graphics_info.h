@@ -4654,18 +4654,20 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh = {
 };
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bulbasaur = {
-    0xFFFF, 
-    OBJ_EVENT_PAL_BULBASAUR, 
-    OBJ_EVENT_PAL_TAG_NONE, 
-    512, 
-    32, 
-    32, 
-    2, 
-    SHADOW_SIZE_M, 
-    FALSE, 
-    FALSE, 
-    TRACKS_FOOT, 
-    &gObjectEventBaseOam_32x32, 
-    sOamTables_32x32, 
-    sAnimTable_Following, sPicTable_Bulbasaur, 
-    gDummySpriteAffineAnimTable};
+    .tileTag = 0xFFFF,
+    .paletteTag = OBJ_EVENT_PAL_BULBASAUR,
+    .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
+    .size = 512,
+    .width = 32,
+    .height = 32,
+    .paletteSlot = 0,
+    .shadowSize = SHADOW_SIZE_M,
+    .inanimate = FALSE,
+    .disableReflectionPaletteLoad = FALSE,
+    .tracks = TRACKS_FOOT,
+    .oam = &gObjectEventBaseOam_32x32,
+    .subspriteTables = sOamTables_32x32,
+    .anims = sAnimTable_Following,
+    .images = sPicTable_Bulbasaur,
+    .affineAnims = gDummySpriteAffineAnimTable
+    };
