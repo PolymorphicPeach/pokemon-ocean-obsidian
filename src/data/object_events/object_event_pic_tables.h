@@ -1269,3 +1269,11 @@ static const struct SpriteFrameImage sPicTable_Bulbasaur[] = {
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 4),
     overworld_frame(gObjectEventPic_Bulbasaur, 4, 4, 5),
 };
+
+
+
+
+
+
+
+

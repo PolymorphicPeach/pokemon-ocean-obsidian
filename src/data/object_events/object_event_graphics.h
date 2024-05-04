@@ -377,3 +377,4 @@ const u16 gObjectEventPal_HoOh[] = INCBIN_U16("graphics/object_events/palettes/h
 
 const u32 gObjectEventPic_Bulbasaur[] = INCBIN_U32("graphics/object_events/pics/pokemon/bulbasaur.4bpp");
 const u16 gObjectEventPalette_Bulbasaur[] = INCBIN_U16("graphics/object_events/palettes/bulbasaur.gbapal");
+

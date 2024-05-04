@@ -4671,3 +4671,5 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bulbasaur = {
     .images = sPicTable_Bulbasaur,
     .affineAnims = gDummySpriteAffineAnimTable
     };
+
+    
