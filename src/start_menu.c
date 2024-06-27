@@ -208,7 +208,8 @@ static const struct MenuAction sStartMenuItems[] =
     [MENU_ACTION_RETIRE_FRONTIER] = {gText_MenuRetire,  {.u8_void = StartMenuBattlePyramidRetireCallback}},
     [MENU_ACTION_PYRAMID_BAG]     = {gText_MenuBag,     {.u8_void = StartMenuBattlePyramidBagCallback}},
     [MENU_ACTION_DEBUG]           = {sText_MenuDebug,   {.u8_void = StartMenuDebugCallback}},
-    [MENU_ACTION_COMPANIONS] = {gText_MenuCompanions, {.u8_void = StartMenuPokemonCallback}},
+    // Remove companions option for now
+    //[MENU_ACTION_COMPANIONS] = {gText_MenuCompanions, {.u8_void = StartMenuPokemonCallback}},
     [MENU_ACTION_STAT_EDITOR]     = {gText_StatEditor,  {.u8_void = StartMenuStatEditorCallback}}
 };
 

@@ -787,7 +787,7 @@ static void SelectorCallback(struct Sprite *sprite)
         {{188, 62 + 20}, {220, 62 + 20}},
         {{188, 78 + 20}, {220, 78 + 20}},
         {{188, 94 + 20}, {220, 94 + 20}},
-        {{188, 110 + 20}, {220, 110 + 20}}, // Thanks Jaizu
+        {{188, 110 + 20}, {220, 110 + 20}},
     };
 
     if(sStatEditorDataPtr->inputMode == INPUT_EDIT_STAT)
@@ -964,15 +964,16 @@ static bool8 statCanIncrease(){
 static void handleEditingStatInput(u32 input){
 
     switch(input){
+        // Condition after && for not allowing IV edits
         case EDIT_INPUT_DECREASE_STATE:
-            if(sStatEditorDataPtr->editingStat != STAT_MINIMUM){
+            if(sStatEditorDataPtr->editingStat != STAT_MINIMUM && sStatEditorDataPtr->selector_x == EDITING_EVS){
                 sStatEditorDataPtr->editingStat--;
                 sStatEditorDataPtr->evUnused += 1;
             }
             break;
 
         case EDIT_INPUT_MAX_DECREASE_STATE:
-            if(sStatEditorDataPtr->editingStat != STAT_MINIMUM){
+            if(sStatEditorDataPtr->editingStat != STAT_MINIMUM && sStatEditorDataPtr->selector_x == EDITING_EVS){
                 u32 evLoss = sStatEditorDataPtr->editingStat;
                 sStatEditorDataPtr->editingStat = STAT_MINIMUM;
                 sStatEditorDataPtr->evUnused += evLoss;
@@ -980,7 +981,7 @@ static void handleEditingStatInput(u32 input){
             break;
 
         case EDIT_INPUT_INCREASE_STATE:
-            if(statCanIncrease()){
+            if(statCanIncrease() && sStatEditorDataPtr->selector_x == EDITING_EVS){
                 sStatEditorDataPtr->editingStat++;
                 sStatEditorDataPtr->evUnused--;
             }

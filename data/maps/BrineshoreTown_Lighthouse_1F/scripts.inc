@@ -41,6 +41,17 @@ SetFollower::
 	end
 
 
+TalkToLighthouseKeeper::
+# 33 "data/maps/BrineshoreTown_Lighthouse_1F/scripts.pory"
+	msgbox keeperText, MSGBOX_NPC
+	return
+
+
 BrineshoreTown_Lighthouse_1F_Rest_Text_0:
 # 14 "data/maps/BrineshoreTown_Lighthouse_1F/scripts.pory"
 	.string "Would you like to rest and heal your party?$"
+
+keeperText:
+# 36 "data/maps/BrineshoreTown_Lighthouse_1F/scripts.pory"
+	.string "You should go to the lab and get a\n"
+	.string "Pokemon. It's just West of here.$"

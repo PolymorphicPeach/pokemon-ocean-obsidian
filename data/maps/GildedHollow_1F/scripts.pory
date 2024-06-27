@@ -106,6 +106,33 @@ text(local) RangerStandard{
     "you could please leave."
 }
 
+text(local) Psychic1Intro{
+    "Hmmm, could you be him?"
+}
+
+text(local) Psychic1Outro{
+    "You're not him."
+}
+
+text(local) Psychic1Standard{
+    "I'm going to use my psychic powers to\n"
+    "find some gold!"
+}
+
+text(local) Psychic2Intro{
+    "I'm supposed to be looking for someone,\n"
+    "but I'd rather not..."
+}
+
+text(local) Psychic2Outro{
+    "Yay, now I can just hang out. Thanks!"
+}
+
+text(local) Psychic2Standard{
+    "I'm going to stay here and practice my\n"
+    "dancing for a bit. I'm paid by the hour."
+}
+
 script TalkToBlocker{
     msgbox(blockerText, MSGBOX_NPC)
 }
@@ -115,12 +142,12 @@ script TalkToDusclops{
 }
 
 // ======== Temporary blockers =============
-text(local) blockerText{
+text blockerText{
     "There's no content beyond this point\n"
     "right now. Thanks for playing!"
 }
 
-text(local) dusclopsText{
+text dusclopsText{
     "Dusclops!"
 }
 // ------------------------------------------
@@ -159,4 +186,53 @@ movement(local) face_away_player{
 
 movement(local) PushPerson{
     jump_2_right
+}
+
+movement(local) RobertRunLeft{
+    walk_fast_up * 2
+    walk_fast_left * 5
+    walk_fast_up * 4
+    walk_fast_left
+}
+
+movement(local) RobertRecoilRight{
+    jump_special_right
+    walk_left
+}
+
+movement(local) YewMoveLeft{
+    walk_fast_left
+    face_right
+}
+
+movement emote_exclamation_mark{
+    emote_exclamation_mark
+}
+
+movement(local) fly_down{
+    fly_down
+}
+
+movement(local) PsychicNorthMoveIn{
+    walk_slow_down * 2
+}
+
+movement(local) PsychicWestMoveIn{
+    walk_slow_up * 2
+}
+
+text(local) YewComplains{
+    "{COLOR BLUE}Yew: {COLOR DARK_GRAY}Hey watch it! This is no place\n"
+    "to be running around like that."
+}
+
+text(local) RobertAskForHelp{
+    "{COLOR BLUE}???: {COLOR DARK_GRAY}I know, I know! Listen, there are\n"
+    "people following me. I need help."
+}
+
+text(local) YewResponse{
+    "{COLOR BLUE}Yew: {COLOR DARK_GRAY}Sorry, we don't have time... \n"
+    "{PLAYER} and I have places\p"
+    "to be and Pokemon to catch."
 }

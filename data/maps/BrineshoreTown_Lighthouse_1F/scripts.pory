@@ -28,3 +28,12 @@ script SetFollower{
     release
     end
 }
+
+script TalkToLighthouseKeeper{
+    msgbox(keeperText, MSGBOX_NPC)
+}
+
+text(local) keeperText{
+    "You should go to the lab and get a\n"
+    "Pokemon. It's just West of here."
+}
