@@ -3114,6 +3114,8 @@ u8 FldEff_RayquazaSpotlight(void)
     return spriteId;
 }
 
+
+
 u8 FldEff_NPCFlyOut(void)
 {
     u8 spriteId = CreateSprite(gFieldEffectObjectTemplatePointers[FLDEFFOBJ_BIRD], 0x78, 0, 1);

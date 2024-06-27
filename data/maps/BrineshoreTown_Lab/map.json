@@ -2,8 +2,8 @@
   "id": "MAP_BRINESHORE_TOWN_LAB",
   "name": "BrineshoreTown_Lab",
   "layout": "LAYOUT_BRINESHORE_TOWN_LAB",
-  "music": "MUS_BIRCH_LAB",
-  "region_map_section": "MAPSEC_WATER_PATH",
+  "music": "MUS_INTRO",
+  "region_map_section": "MAPSEC_BRINESHORE_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -117,7 +117,7 @@
       "elevation": 0,
       "var": "BRINESHORETOWN_STATE",
       "var_value": "1",
-      "script": "BrineshoreTown_Lab_YewJoinsHumanParty"
+      "script": "BrineshoreTown_Lab_LeaveLeftTrigger"
     },
     {
       "type": "trigger",
@@ -126,7 +126,7 @@
       "elevation": 0,
       "var": "BRINESHORETOWN_STATE",
       "var_value": "1",
-      "script": "BrineshoreTown_Lab_YewJoinsHumanParty"
+      "script": "BrineshoreTown_Lab_LeaveRightTrigger"
     }
   ],
   "bg_events": [

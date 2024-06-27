@@ -1086,3 +1086,11 @@ EventScript_VsSeekerChargingDone::
 	.include "data/maps/BrineshoreTown_Rathouse/scripts.inc"
 
 	.include "data/maps/BrineshoreTown_Rathouse_Basement/scripts.inc"
+
+	.include "data/maps/Route1_RestHouse/scripts.inc"
+
+	.include "data/maps/BrineshoreTown_AbandonedHouse/scripts.inc"
+
+	.include "data/maps/GildedHollow_1F/scripts.inc"
+
+	.include "data/maps/GildedHollow_2F/scripts.inc"

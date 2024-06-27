@@ -2,6 +2,8 @@
   "group_order": [
     "gMapGroup_TownsAndRoutes",
     "gMapGroup_IndoorBrineshore",
+    "gMapGroup_IndoorRoute1",
+    "gMapGroup_GildedHollow",
     "gMapGroup_IndoorLittleroot",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorDewford",
@@ -101,7 +103,15 @@
     "BrineshoreTown_Lab",
     "BrineshoreTown_Lighthouse_1F",
     "BrineshoreTown_Rathouse",
-    "BrineshoreTown_Rathouse_Basement"
+    "BrineshoreTown_Rathouse_Basement",
+    "BrineshoreTown_AbandonedHouse"
+  ],
+  "gMapGroup_IndoorRoute1": [
+    "Route1_RestHouse"
+  ],
+  "gMapGroup_GildedHollow": [
+    "GildedHollow_1F",
+    "GildedHollow_2F"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

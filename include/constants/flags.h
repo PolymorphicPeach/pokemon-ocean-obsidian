@@ -652,44 +652,49 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_123_RARE_CANDY                (FLAG_HIDDEN_ITEMS_START + 0x6E)
 #define FLAG_HIDDEN_ITEM_ROUTE_105_BIG_PEARL                 (FLAG_HIDDEN_ITEMS_START + 0x6F)
 
-#define FLAG_UNUSED  0x264
-#define FLAG_STARTER_BALL_1  0x265
-#define FLAG_STARTER_BALL_2  0x266
-#define FLAG_STARTER_BALL_3  0x267 
-#define FLAG_STARTER_BALL_4 0x268 
-#define FLAG_FIRST_BATTLE  0x269 
-#define FLAG_BRINESHORE_GAURD  0x26A
-#define FLAG_ITEM_BRINESHORE_TM_AERIAL_ACE  0x26B // Unused Flag
-#define FLAG_ITEM_BRINESHORE_SOFT_SAND      0x26C // Unused Flag
-#define FLAG_UNUSED_0x26D  0x26D // Unused Flag
-#define FLAG_UNUSED_0x26E  0x26E // Unused Flag
-#define FLAG_UNUSED_0x26F  0x26F // Unused Flag
-#define FLAG_UNUSED_0x270  0x270 // Unused Flag
-#define FLAG_UNUSED_0x271  0x271 // Unused Flag
-#define FLAG_UNUSED_0x272  0x272 // Unused Flag
-#define FLAG_UNUSED_0x273  0x273 // Unused Flag
-#define FLAG_UNUSED_0x274  0x274 // Unused Flag
-#define FLAG_UNUSED_0x275  0x275 // Unused Flag
-#define FLAG_UNUSED_0x276  0x276 // Unused Flag
-#define FLAG_UNUSED_0x277  0x277 // Unused Flag
-#define FLAG_UNUSED_0x278  0x278 // Unused Flag
-#define FLAG_UNUSED_0x279  0x279 // Unused Flag
-#define FLAG_UNUSED_0x27A  0x27A // Unused Flag
-#define FLAG_UNUSED_0x27B  0x27B // Unused Flag
-#define FLAG_UNUSED_0x27C  0x27C // Unused Flag
-#define FLAG_UNUSED_0x27D  0x27D // Unused Flag
-#define FLAG_UNUSED_0x27E  0x27E // Unused Flag
-#define FLAG_UNUSED_0x27F  0x27F // Unused Flag
-#define FLAG_UNUSED_0x280  0x280 // Unused Flag
-#define FLAG_UNUSED_0x281  0x281 // Unused Flag
-#define FLAG_UNUSED_0x282  0x282 // Unused Flag
-#define FLAG_UNUSED_0x283  0x283 // Unused Flag
-#define FLAG_UNUSED_0x284  0x284 // Unused Flag
-#define FLAG_UNUSED_0x285  0x285 // Unused Flag
-#define FLAG_UNUSED_0x286  0x286 // Unused Flag
-#define FLAG_UNUSED_0x287  0x287 // Unused Flag
-#define FLAG_UNUSED_0x288  0x288 // Unused Flag
-#define FLAG_UNUSED_0x289  0x289 // Unused Flag
+
+
+// ============================================================
+//      My Changes
+// ============================================================
+#define FLAG_UNUSED                                 0x264
+#define FLAG_STARTER_BALL_1                         0x265
+#define FLAG_STARTER_BALL_2                         0x266
+#define FLAG_STARTER_BALL_3                         0x267 
+#define FLAG_STARTER_BALL_4                         0x268 
+#define FLAG_FIRST_BATTLE                           0x269 
+#define FLAG_BRINESHORE_GAURD                       0x26A
+#define FLAG_ITEM_BRINESHORE_TM_AERIAL_ACE          0x26B 
+#define FLAG_ITEM_BRINESHORE_SOFT_SAND              0x26C 
+#define FLAG_STOLE_LEFTOVERS                        0x26D
+#define FLAG_RAT_BASEMENT_QUEST                     0x26E
+#define FLAG_RAT_BASEMENT_NUGGET                    0x26F
+#define FLAG_RAT_BASEMENT_HIDDEN_SPELL_TAG          0x270
+#define FLAG_ITEM_TM17                              0x271 // Protect
+#define FLAG_HIDDEN_BLACK_GLASSES                   0x272
+#define FLAG_ITEM_TM48                              0x273 // Skill Swap
+#define FLAG_ITEM_TM09                              0x274 // Bullet Seed
+#define FLAG_AXEW_TRADE                             0x275
+#define FLAG_ITEM_TM51                              0x276 // Thunder Wave
+#define FLAG_HIDDEN_MIRACLE_SEED                    0x277
+#define FLAG_HIDDEN_BIG_ROOT                        0x278
+#define FLAG_HIDDEN_HARD_STONE                      0x279
+#define FLAG_HIDDEN_GH_NUGGET1                      0x27A
+#define FLAG_HIDDEN_GH_HEAVY_BALL                   0x27B
+#define FLAG_HIDDEN_GH_MOON_STONE                   0x27C
+#define FLAG_HIDDEN_GH_NUGGET2                      0x27D
+#define FLAG_HIDDEN_GH_MAX_REVIVE                   0x27E
+#define FLAG_HIDDEN_GH_METAL_COAT                   0x27F
+#define FLAG_ITEM_TM52                              0x280 // Shadow Claw
+#define FLAG_ITEM_TM53                              0x281 // Rock Blast
+#define FLAG_ITEM_TM54                              0x282 // Psybeam
+#define FLAG_ITEM_TM55                              0x283 // Power Gem
+#define FLAG_ITEM_CLEANSE_TAG                       0x284
+#define FLAG_ITEM_LAGGING_TAIL                      0x285
+#define FLAG_ITEM_TWISTED_SPOON                     0x286
+#define FLAG_ITEM_PROTECTIVE_PADS                   0x287
+#define FLAG_ROBERT_JOINED_PARTY                    0x288
+#define FLAG_GH_PUSHED_PERSON                       0x289
 #define FLAG_UNUSED_0x28A  0x28A // Unused Flag
 #define FLAG_UNUSED_0x28B  0x28B // Unused Flag
 #define FLAG_UNUSED_0x28C  0x28C // Unused Flag
@@ -737,9 +742,14 @@
 #define FLAG_UNUSED_0x2B6  0x2B6 // Unused Flag
 #define FLAG_UNUSED_0x2B7  0x2B7 // Unused Flag
 #define FLAG_UNUSED_0x2B8  0x2B8 // Unused Flag
-#define FLAG_UNUSED_0x2B9  0x2B9 // Unused Flag
-#define FLAG_UNUSED_0x2BA  0x2BA // Unused Flag
-#define FLAG_UNUSED_0x2BB  0x2BB // Unused Flag
+
+// --- Debug Utilities ---
+#define FLAG_NO_ENCOUNTER    0x2B9 
+#define FLAG_NO_TRAINER_SEE  0x2BA 
+#define FLAG_NO_COLLISION    0x2BB
+// ==========================================================
+//      End of my changes (for now)
+// ==========================================================
 
 // Event Flags
 #define FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG                      0x2BC

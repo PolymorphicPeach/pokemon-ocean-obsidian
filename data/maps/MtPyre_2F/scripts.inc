@@ -69,202 +69,182 @@ MtPyre_2F_EventScript_Dez::
 # 35 "data/maps/MtPyre_2F/scripts.pory"
 
 # 36 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_EventScript_Leah::
+MtPyre_2F_Text_MemoriesOfSkitty:
 # 37 "data/maps/MtPyre_2F/scripts.pory"
-	trainerbattle_single TRAINER_LEAH, MtPyre_2F_Text_LeahIntro, MtPyre_2F_Text_LeahDefeat
+	.string "Memories of my darling SKITTY…\n"
 # 38 "data/maps/MtPyre_2F/scripts.pory"
-	msgbox MtPyre_2F_Text_LeahPostBattle, MSGBOX_AUTOCLOSE
+	.string "My eyes overflow thinking about it.$"
 # 39 "data/maps/MtPyre_2F/scripts.pory"
-	end
-# 40 "data/maps/MtPyre_2F/scripts.pory"
 
+# 40 "data/maps/MtPyre_2F/scripts.pory"
+MtPyre_2F_Text_TumbledFromFloorAbove:
 # 41 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_EventScript_Zander::
+	.string "Ooch, ouch… There are holes in the\n"
 # 42 "data/maps/MtPyre_2F/scripts.pory"
-	trainerbattle_single TRAINER_ZANDER, MtPyre_2F_Text_ZanderIntro, MtPyre_2F_Text_ZanderDefeat
+	.string "ground here and there.\p"
 # 43 "data/maps/MtPyre_2F/scripts.pory"
-	msgbox MtPyre_2F_Text_ZanderPostBattle, MSGBOX_AUTOCLOSE
+	.string "I didn't notice and took a tumble from\n"
 # 44 "data/maps/MtPyre_2F/scripts.pory"
-	end
+	.string "the floor above.$"
 # 45 "data/maps/MtPyre_2F/scripts.pory"
 
 # 46 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_MemoriesOfSkitty:
+MtPyre_2F_Text_MarkIntro:
 # 47 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Memories of my darling SKITTY…\n"
+	.string "Hey! Are you searching for POKéMON?\n"
 # 48 "data/maps/MtPyre_2F/scripts.pory"
-	.string "My eyes overflow thinking about it.$"
+	.string "You came along after me! You're rude!$"
 # 49 "data/maps/MtPyre_2F/scripts.pory"
 
 # 50 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_TumbledFromFloorAbove:
-# 51 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Ooch, ouch… There are holes in the\n"
-# 52 "data/maps/MtPyre_2F/scripts.pory"
-	.string "ground here and there.\p"
-# 53 "data/maps/MtPyre_2F/scripts.pory"
-	.string "I didn't notice and took a tumble from\n"
-# 54 "data/maps/MtPyre_2F/scripts.pory"
-	.string "the floor above.$"
-# 55 "data/maps/MtPyre_2F/scripts.pory"
-
-# 56 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_MarkIntro:
-# 57 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Hey! Are you searching for POKéMON?\n"
-# 58 "data/maps/MtPyre_2F/scripts.pory"
-	.string "You came along after me! You're rude!$"
-# 59 "data/maps/MtPyre_2F/scripts.pory"
-
-# 60 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_MarkDefeat:
-# 61 "data/maps/MtPyre_2F/scripts.pory"
+# 51 "data/maps/MtPyre_2F/scripts.pory"
 	.string "Ayieeeeh!\n"
-# 62 "data/maps/MtPyre_2F/scripts.pory"
+# 52 "data/maps/MtPyre_2F/scripts.pory"
 	.string "I'm sorry, forgive me, please!$"
-# 63 "data/maps/MtPyre_2F/scripts.pory"
+# 53 "data/maps/MtPyre_2F/scripts.pory"
 
-# 64 "data/maps/MtPyre_2F/scripts.pory"
+# 54 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_MarkPostBattle:
-# 65 "data/maps/MtPyre_2F/scripts.pory"
+# 55 "data/maps/MtPyre_2F/scripts.pory"
 	.string "People don't come here often, so\n"
-# 66 "data/maps/MtPyre_2F/scripts.pory"
+# 56 "data/maps/MtPyre_2F/scripts.pory"
 	.string "I thought there'd be rare POKéMON.$"
+# 57 "data/maps/MtPyre_2F/scripts.pory"
+
+# 58 "data/maps/MtPyre_2F/scripts.pory"
+MtPyre_2F_Text_LukeIntro:
+# 59 "data/maps/MtPyre_2F/scripts.pory"
+	.string "LUKE: We're here on a dare.\p"
+# 60 "data/maps/MtPyre_2F/scripts.pory"
+	.string "Heheh, if I show her how cool I am,\n"
+# 61 "data/maps/MtPyre_2F/scripts.pory"
+	.string "she'll fall for me. I know it!\p"
+# 62 "data/maps/MtPyre_2F/scripts.pory"
+	.string "I know! I'll cream you and show her\n"
+# 63 "data/maps/MtPyre_2F/scripts.pory"
+	.string "how cool I am!$"
+# 64 "data/maps/MtPyre_2F/scripts.pory"
+
+# 65 "data/maps/MtPyre_2F/scripts.pory"
+MtPyre_2F_Text_LukeDefeat:
+# 66 "data/maps/MtPyre_2F/scripts.pory"
+	.string "LUKE: Whoopsie!$"
 # 67 "data/maps/MtPyre_2F/scripts.pory"
 
 # 68 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_LukeIntro:
-# 69 "data/maps/MtPyre_2F/scripts.pory"
-	.string "LUKE: We're here on a dare.\p"
-# 70 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Heheh, if I show her how cool I am,\n"
-# 71 "data/maps/MtPyre_2F/scripts.pory"
-	.string "she'll fall for me. I know it!\p"
-# 72 "data/maps/MtPyre_2F/scripts.pory"
-	.string "I know! I'll cream you and show her\n"
-# 73 "data/maps/MtPyre_2F/scripts.pory"
-	.string "how cool I am!$"
-# 74 "data/maps/MtPyre_2F/scripts.pory"
-
-# 75 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_LukeDefeat:
-# 76 "data/maps/MtPyre_2F/scripts.pory"
-	.string "LUKE: Whoopsie!$"
-# 77 "data/maps/MtPyre_2F/scripts.pory"
-
-# 78 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_LukePostBattle:
-# 79 "data/maps/MtPyre_2F/scripts.pory"
+# 69 "data/maps/MtPyre_2F/scripts.pory"
 	.string "LUKE: Well, we lost but that's okay!\n"
-# 80 "data/maps/MtPyre_2F/scripts.pory"
+# 70 "data/maps/MtPyre_2F/scripts.pory"
 	.string "I'm right here by your side.\l"
-# 81 "data/maps/MtPyre_2F/scripts.pory"
+# 71 "data/maps/MtPyre_2F/scripts.pory"
 	.string "We'll make it through this dare!$"
-# 82 "data/maps/MtPyre_2F/scripts.pory"
+# 72 "data/maps/MtPyre_2F/scripts.pory"
 
-# 83 "data/maps/MtPyre_2F/scripts.pory"
+# 73 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_LukeNotEnoughMons:
-# 84 "data/maps/MtPyre_2F/scripts.pory"
+# 74 "data/maps/MtPyre_2F/scripts.pory"
 	.string "LUKE: If you want to take me on,\n"
-# 85 "data/maps/MtPyre_2F/scripts.pory"
+# 75 "data/maps/MtPyre_2F/scripts.pory"
 	.string "bring some more POKéMON.\p"
-# 86 "data/maps/MtPyre_2F/scripts.pory"
+# 76 "data/maps/MtPyre_2F/scripts.pory"
 	.string "If you don't, I won't be able to show\n"
-# 87 "data/maps/MtPyre_2F/scripts.pory"
+# 77 "data/maps/MtPyre_2F/scripts.pory"
 	.string "off to my girl how cool I am!$"
-# 88 "data/maps/MtPyre_2F/scripts.pory"
+# 78 "data/maps/MtPyre_2F/scripts.pory"
 
-# 89 "data/maps/MtPyre_2F/scripts.pory"
+# 79 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_DezIntro:
-# 90 "data/maps/MtPyre_2F/scripts.pory"
+# 80 "data/maps/MtPyre_2F/scripts.pory"
 	.string "DEZ: I came here on a dare with my\n"
-# 91 "data/maps/MtPyre_2F/scripts.pory"
+# 81 "data/maps/MtPyre_2F/scripts.pory"
 	.string "boyfriend.\p"
-# 92 "data/maps/MtPyre_2F/scripts.pory"
+# 82 "data/maps/MtPyre_2F/scripts.pory"
 	.string "It's really scary, but I'm with my\n"
-# 93 "data/maps/MtPyre_2F/scripts.pory"
+# 83 "data/maps/MtPyre_2F/scripts.pory"
 	.string "boyfriend. It's okay.\p"
-# 94 "data/maps/MtPyre_2F/scripts.pory"
+# 84 "data/maps/MtPyre_2F/scripts.pory"
 	.string "I know! I'll get my boyfriend to look\n"
-# 95 "data/maps/MtPyre_2F/scripts.pory"
+# 85 "data/maps/MtPyre_2F/scripts.pory"
 	.string "cool by beating you!$"
-# 96 "data/maps/MtPyre_2F/scripts.pory"
+# 86 "data/maps/MtPyre_2F/scripts.pory"
 
-# 97 "data/maps/MtPyre_2F/scripts.pory"
+# 87 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_DezDefeat:
-# 98 "data/maps/MtPyre_2F/scripts.pory"
+# 88 "data/maps/MtPyre_2F/scripts.pory"
 	.string "DEZ: Waaaah! I'm scared!$"
+# 89 "data/maps/MtPyre_2F/scripts.pory"
+
+# 90 "data/maps/MtPyre_2F/scripts.pory"
+MtPyre_2F_Text_DezPostBattle:
+# 91 "data/maps/MtPyre_2F/scripts.pory"
+	.string "DEZ: We're lovey-dovey, so we don't\n"
+# 92 "data/maps/MtPyre_2F/scripts.pory"
+	.string "care if we lose!$"
+# 93 "data/maps/MtPyre_2F/scripts.pory"
+
+# 94 "data/maps/MtPyre_2F/scripts.pory"
+MtPyre_2F_Text_DezNotEnoughMons:
+# 95 "data/maps/MtPyre_2F/scripts.pory"
+	.string "DEZ: If you want to challenge us, you\n"
+# 96 "data/maps/MtPyre_2F/scripts.pory"
+	.string "should bring at least two POKéMON.\p"
+# 97 "data/maps/MtPyre_2F/scripts.pory"
+	.string "My boyfriend's strong.\n"
+# 98 "data/maps/MtPyre_2F/scripts.pory"
+	.string "Just one POKéMON won't do at all.$"
 # 99 "data/maps/MtPyre_2F/scripts.pory"
 
 # 100 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_DezPostBattle:
+MtPyre_2F_Text_LeahIntro:
 # 101 "data/maps/MtPyre_2F/scripts.pory"
-	.string "DEZ: We're lovey-dovey, so we don't\n"
+	.string "You are an unfamiliar sight…\n"
 # 102 "data/maps/MtPyre_2F/scripts.pory"
-	.string "care if we lose!$"
+	.string "Depart before anything befalls you!$"
 # 103 "data/maps/MtPyre_2F/scripts.pory"
 
 # 104 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_DezNotEnoughMons:
+MtPyre_2F_Text_LeahDefeat:
 # 105 "data/maps/MtPyre_2F/scripts.pory"
-	.string "DEZ: If you want to challenge us, you\n"
+	.string "Hmm…\n"
 # 106 "data/maps/MtPyre_2F/scripts.pory"
-	.string "should bring at least two POKéMON.\p"
+	.string "You're durable.$"
 # 107 "data/maps/MtPyre_2F/scripts.pory"
-	.string "My boyfriend's strong.\n"
-# 108 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Just one POKéMON won't do at all.$"
-# 109 "data/maps/MtPyre_2F/scripts.pory"
 
+# 108 "data/maps/MtPyre_2F/scripts.pory"
+MtPyre_2F_Text_LeahPostBattle:
+# 109 "data/maps/MtPyre_2F/scripts.pory"
+	.string "Our family has been TRAINERS here\n"
 # 110 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_LeahIntro:
+	.string "since my great-grandmother's time…\p"
 # 111 "data/maps/MtPyre_2F/scripts.pory"
-	.string "You are an unfamiliar sight…\n"
+	.string "It is my duty to protect this\n"
 # 112 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Depart before anything befalls you!$"
+	.string "mountain…$"
 # 113 "data/maps/MtPyre_2F/scripts.pory"
 
 # 114 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_LeahDefeat:
+MtPyre_2F_Text_ZanderIntro:
 # 115 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Hmm…\n"
+	.string "Kiyaaaaah!\n"
 # 116 "data/maps/MtPyre_2F/scripts.pory"
-	.string "You're durable.$"
+	.string "I'm terrified!$"
 # 117 "data/maps/MtPyre_2F/scripts.pory"
 
 # 118 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_LeahPostBattle:
-# 119 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Our family has been TRAINERS here\n"
-# 120 "data/maps/MtPyre_2F/scripts.pory"
-	.string "since my great-grandmother's time…\p"
-# 121 "data/maps/MtPyre_2F/scripts.pory"
-	.string "It is my duty to protect this\n"
-# 122 "data/maps/MtPyre_2F/scripts.pory"
-	.string "mountain…$"
-# 123 "data/maps/MtPyre_2F/scripts.pory"
-
-# 124 "data/maps/MtPyre_2F/scripts.pory"
-MtPyre_2F_Text_ZanderIntro:
-# 125 "data/maps/MtPyre_2F/scripts.pory"
-	.string "Kiyaaaaah!\n"
-# 126 "data/maps/MtPyre_2F/scripts.pory"
-	.string "I'm terrified!$"
-# 127 "data/maps/MtPyre_2F/scripts.pory"
-
-# 128 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_ZanderDefeat:
-# 129 "data/maps/MtPyre_2F/scripts.pory"
+# 119 "data/maps/MtPyre_2F/scripts.pory"
 	.string "Nooooooo!\n"
-# 130 "data/maps/MtPyre_2F/scripts.pory"
+# 120 "data/maps/MtPyre_2F/scripts.pory"
 	.string "I lost my wits!$"
-# 131 "data/maps/MtPyre_2F/scripts.pory"
+# 121 "data/maps/MtPyre_2F/scripts.pory"
 
-# 132 "data/maps/MtPyre_2F/scripts.pory"
+# 122 "data/maps/MtPyre_2F/scripts.pory"
 MtPyre_2F_Text_ZanderPostBattle:
-# 133 "data/maps/MtPyre_2F/scripts.pory"
+# 123 "data/maps/MtPyre_2F/scripts.pory"
 	.string "I get freaked out every time I see\n"
-# 134 "data/maps/MtPyre_2F/scripts.pory"
+# 124 "data/maps/MtPyre_2F/scripts.pory"
 	.string "anything move…\p"
-# 135 "data/maps/MtPyre_2F/scripts.pory"
+# 125 "data/maps/MtPyre_2F/scripts.pory"
 	.string "I shouldn't have come here to train…$"

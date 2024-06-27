@@ -17,4 +17,19 @@ const struct Trainer gBattlePartners[] = {
         .trainerPic = TRAINER_BACK_PIC_STEVEN,
         .trainerName = _("STEVEN"),
     },
+
+    [PARTNER_YEW1] = {
+        .party = TRAINER_PARTY(Party_YewPartner),
+        .trainerPic = TRAINER_BACK_PIC_YEW,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerClass = TRAINER_CLASS_EXPERT,
+        .trainerName = _("Yew")
+    },
+
+    [PARTNER_ROBERT1] = {
+        .party = TRAINER_PARTY(Party_RobertPartner),
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_ELITE_FOUR,
+        .trainerClass = TRAINER_CLASS_PSYCHIC,
+        .trainerName = _("Robert")
+    }
 };

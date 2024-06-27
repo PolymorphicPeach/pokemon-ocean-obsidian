@@ -1,3 +1,65 @@
 mapscripts BrineshoreTown_Rathouse_MapScripts{
 
 }
+
+script StrangeBooks{
+    lock
+
+    msgbox("These books have strange titles:\n{COLOR RED}Picatrix, Goetia, Grand Grimoire...", MSGBOX_AUTOCLOSE)
+
+    release
+}
+
+script LowStockFridge{
+    lock
+
+    if(flag(FLAG_STOLE_LEFTOVERS)){
+        msgbox("There is no food left.", MSGBOX_AUTOCLOSE)
+    }
+    else{
+        msgbox(FridgeLeftovers, MSGBOX_YESNO)
+        if(var(VAR_RESULT) == YES){
+            playfanfare(MUS_OBTAIN_ITEM)
+            giveitem(ITEM_LEFTOVERS)
+            setflag(FLAG_STOLE_LEFTOVERS)
+        }
+    }
+
+    release
+}
+
+script BasementProblems{
+    lock
+
+    if(!flag(FLAG_RAT_BASEMENT_QUEST)){
+        msgbox(PokemonInBasement, MSGBOX_NPC)
+    }
+    else{
+        msgbox("Thank you so much, {PLAYER}!", MSGBOX_NPC)
+    }
+
+    release
+}
+
+text PokemonInBasement{
+    "Something big broke into our basement.\n"
+    "I know you have a Pokemon now.\l"
+    "Please help me get rid of it."
+}
+
+script BackedUpSink{
+    lock
+    msgbox("A foul smell emanates from the\nclogged sink.", MSGBOX_AUTOCLOSE)
+    release
+}
+
+script OldTV{
+    lock
+    msgbox("This old TV has not worked in a\nlong time.")
+    release
+}
+
+text FridgeLeftovers{
+    "The family's fridge is nearly empty.\n"
+    "Take the {COLOR BLUE} Leftovers {COLOR DARK_GRAY}?"
+}

@@ -4655,12 +4655,12 @@ const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_HoOh = {
 
 const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Bulbasaur = {
     .tileTag = 0xFFFF,
-    .paletteTag = OBJ_EVENT_PAL_BULBASAUR,
+    .paletteTag = OBJ_EVENT_PAL_TAG_BULBASAUR,
     .reflectionPaletteTag = OBJ_EVENT_PAL_TAG_NONE,
     .size = 512,
     .width = 32,
     .height = 32,
-    .paletteSlot = 0,
+    .paletteSlot = PALSLOT_NPC_SPECIAL,
     .shadowSize = SHADOW_SIZE_M,
     .inanimate = FALSE,
     .disableReflectionPaletteLoad = FALSE,

@@ -207,3 +207,18 @@ const u16 gMetatileAttributes_MysteryEventsHouse[] = INCBIN_U16("data/tilesets/s
 
 const u16 gMetatiles_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatiles.bin");
 const u16 gMetatileAttributes_UnionRoom[] = INCBIN_U16("data/tilesets/secondary/union_room/metatile_attributes.bin");
+
+const u16 gMetatiles_gTileset_Building_Enhanced[] = INCBIN_U16("data/tilesets/primary/building_enhanced/metatiles.bin");
+const u16 gMetatileAttributes_gTileset_Building_Enhanced[] = INCBIN_U16("data/tilesets/primary/building_enhanced/metatile_attributes.bin");
+
+const u16 gMetatiles_Improved_House_Interior[] = INCBIN_U16("data/tilesets/primary/improved_house_interior/metatiles.bin");
+const u16 gMetatileAttributes_Improved_House_Interior[] = INCBIN_U16("data/tilesets/primary/improved_house_interior/metatile_attributes.bin");
+
+const u16 gMetatiles_New_Interior[] = INCBIN_U16("data/tilesets/primary/new_interior/metatiles.bin");
+const u16 gMetatileAttributes_New_Interior[] = INCBIN_U16("data/tilesets/primary/new_interior/metatile_attributes.bin");
+
+const u16 gMetatiles_GoldenMine[] = INCBIN_U16("data/tilesets/primary/golden_mine/metatiles.bin");
+const u16 gMetatileAttributes_GoldenMine[] = INCBIN_U16("data/tilesets/primary/golden_mine/metatile_attributes.bin");
+
+const u16 gMetatiles_Gilded_Hollow[] = INCBIN_U16("data/tilesets/secondary/gilded_hollow/metatiles.bin");
+const u16 gMetatileAttributes_Gilded_Hollow[] = INCBIN_U16("data/tilesets/secondary/gilded_hollow/metatile_attributes.bin");

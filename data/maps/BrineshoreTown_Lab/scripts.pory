@@ -136,45 +136,89 @@ script BrineshoreTown_Lab_RemoveStarterPokeball{
     }
 }
 
-script BrineshoreTown_Lab_YewGivePokedex{
-    lock
-    msgbox(GivePokedex)
-    playfanfare(MUS_OBTAIN_ITEM)
-    setflag(FLAG_SYS_POKEDEX_GET)
-    waitmessage
-    release
-}
-
 script BrineshoreTown_Lab_TalkToYew{
-    lock
-    faceplayer
     if(flag(FLAG_STARTER_BALL_4)){
-        msgbox(FixedComputer)
+        msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}Hey, the computer is\nworking again!", MSGBOX_NPC)
     }
     else{
-        msgbox(BrokenComputer)
+        msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}Ugh, this computer is\nalways crashing.\lI think it's that Porygon...", MSGBOX_NPC)
     }
-    release
 }
 
-script BrineshoreTown_Lab_YewJoinsHumanParty{
+script BrineshoreTown_Lab_LeaveLeftTrigger{
     lockall
 
     if(var(BRINESHORETOWN_STATE) == 1 && !flag(FLAG_SYS_COMPANION_GET)){
         msgbox(WaitText)
         applymovement(OBJ_EVENT_ID_PLAYER, face_up)
-        applymovement(5, ProfessorWalkDown)
+        applymovement(5, ProfessorWalkLeftTrigger)
         waitmovement(5)
-        msgbox(TakeYew)
-        waitmessage
+
+        call(YewJoinsLeft)
+
         setflag(FLAG_SYS_COMPANION_GET)
         setvar(BRINESHORETOWN_STATE, 3)
-        removeobject(6)
         setflag(FLAG_TEMP_1)
     }
 
     releaseall
-    end  
+}
+
+script BrineshoreTown_Lab_LeaveRightTrigger{
+    lockall
+
+    if(var(BRINESHORETOWN_STATE) == 1 && !flag(FLAG_SYS_COMPANION_GET)){
+        msgbox(WaitText)
+        applymovement(OBJ_EVENT_ID_PLAYER, face_up)
+        applymovement(5, ProfessorWalkRightTrigger)
+        waitmovement(5)
+
+        call(YewJoinsRight)
+
+        setflag(FLAG_SYS_COMPANION_GET)
+        setvar(BRINESHORETOWN_STATE, 3)
+        removeobject(6)
+        setflag(FLAG_TEMP_1)
+
+    }
+
+    releaseall
+}
+
+script YewJoinsLeft{
+    msgbox(TakeYew)
+    applymovement(6, YewWalkLeftTrigger)
+    waitmovement(6)
+    call(YewGivePokedexAndEevee)
+    applymovement(6, walk_down)
+    waitmovement(6)
+    removeobject(6)
+}
+
+script YewJoinsRight{
+    msgbox(TakeYew)
+    applymovement(6, YewWalkRightTrigger)
+    waitmovement(6)
+    applymovement(OBJ_EVENT_ID_PLAYER, face_right)
+    waitmovement(0)
+    call(YewGivePokedexAndEevee)
+    applymovement(6, walk_left)
+    waitmovement(6)
+    removeobject(6)
+}
+
+script YewGivePokedexAndEevee{
+    setvar(VAR_TEMP_2, 5)
+
+    msgbox(GivePokedex)
+    waitmessage
+    playfanfare(MUS_OBTAIN_ITEM)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}You got a Pokedex!", MSGBOX_AUTOCLOSE)
+    showmonpic(SPECIES_EEVEE, 10, 3)
+    msgbox("{COLOR BLUE}{SHADOW LIGHT_BLUE}You got an Eevee!", MSGBOX_AUTOCLOSE)
+    givemon(SPECIES_EEVEE, 5, ITEM_NONE, ITEM_POKE_BALL, VAR_TEMP_2, 1)
+    hidemonpic
+    
 }
 
 script BrineshoreTown_Lab_TalkToProfessor{
@@ -198,9 +242,28 @@ movement YewWalkToProfessor{
     face_down
 }
 
-movement ProfessorWalkDown{
+movement ProfessorWalkLeftTrigger{
     walk_right * 2
     walk_down * 2
+}
+
+movement ProfessorWalkRightTrigger{
+    walk_right * 3
+    walk_down * 2
+}
+
+movement YewWalkLeftTrigger{
+    walk_down
+    walk_left * 3
+}
+
+movement YewWalkRightTrigger{
+    walk_down
+    walk_left * 2
+}
+
+movement walk_left{
+    walk_left
 }
 
 movement walk_up{
@@ -208,8 +271,8 @@ movement walk_up{
 }
 
 text StandardProfessorText{
-    format("{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Go ahead and choose a Pokemon,\n"
-        "I need to get this delivery sorted.\p")
+    "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Go ahead and choose a Pokemon,\n"
+    "I need to get this delivery sorted."
 }
 
 text ChooseStarterText{
@@ -235,22 +298,12 @@ text WaitText{
 }
 
 text TakeYew{
-    format("{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Assistant Yew has yet to\npass the POPME.\pYou'll be taking him north with you to the\nAcademy where he can take the exam.")
+    "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Assistant Yew needs you\n"
+    "to take him north to the academy."
  
 }
 
 text GivePokedex{
-     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I need you to escort me,\n"
-     "north. In exchange for your trouble, take\p"
-     "this Pokedex."
-}
-
-text BrokenComputer{
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That Porygon is\n"
-     "always breaking this computer somehow..."
-}
-
-text FixedComputer{
-    "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take good care of\n"
-     "Porygon for me."
+     "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Thank you for helping!\n"
+     "Here, consider it a form of payment."
 }

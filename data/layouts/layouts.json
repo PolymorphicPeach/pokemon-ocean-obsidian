@@ -4444,8 +4444,8 @@
     {
       "id": "LAYOUT_ROUTE1",
       "name": "Route1_Layout",
-      "width": 40,
-      "height": 30,
+      "width": 45,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Route1/border.bin",
@@ -4480,6 +4480,46 @@
       "secondary_tileset": "gTileset_RusturfTunnel",
       "border_filepath": "data/layouts/BrineshoreTown_Rathouse_Basement/border.bin",
       "blockdata_filepath": "data/layouts/BrineshoreTown_Rathouse_Basement/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_REST_HOUSE",
+      "name": "Route1_RestHouse_Layout",
+      "width": 10,
+      "height": 14,
+      "primary_tileset": "gTileset_New_Interior",
+      "secondary_tileset": "gTileset_BattleDome",
+      "border_filepath": "data/layouts/Route1_RestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route1_RestHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_BRINESHORE_TOWN_ABANDONED_HOUSE",
+      "name": "BrineshoreTown_AbandonedHouse_Layout",
+      "width": 12,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_SecretBaseBlueCave",
+      "border_filepath": "data/layouts/BrineshoreTown_AbandonedHouse/border.bin",
+      "blockdata_filepath": "data/layouts/BrineshoreTown_AbandonedHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_GILDED_HOLLOW_1F",
+      "name": "GildedHollow_1F_Layout",
+      "width": 67,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Gilded_Hollow",
+      "border_filepath": "data/layouts/GildedHollow_1F/border.bin",
+      "blockdata_filepath": "data/layouts/GildedHollow_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_GILDED_HOLLOW_2F",
+      "name": "GildedHollow_2F_Layout",
+      "width": 20,
+      "height": 20,
+      "primary_tileset": "gTileset_New_Interior",
+      "secondary_tileset": "gTileset_MeteorFalls",
+      "border_filepath": "data/layouts/GildedHollow_2F/border.bin",
+      "blockdata_filepath": "data/layouts/GildedHollow_2F/map.bin"
     }
   ]
 }

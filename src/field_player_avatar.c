@@ -604,24 +604,19 @@ static void PlayerNotOnBikeTurningInPlace(u8 direction, u16 heldKeys)
     PlayerTurnInPlace(direction);
 }
 
-static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
-{
+static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys){
     u8 collision = CheckForPlayerAvatarCollision(direction);
 
-    if (collision)
-    {
-        if (collision == COLLISION_LEDGE_JUMP)
-        {
+    if (collision){
+        if (collision == COLLISION_LEDGE_JUMP){
             PlayerJumpLedge(direction);
             return;
         }
-        else if (collision == COLLISION_OBJECT_EVENT && IsPlayerCollidingWithFarawayIslandMew(direction))
-        {
+        else if (collision == COLLISION_OBJECT_EVENT && IsPlayerCollidingWithFarawayIslandMew(direction)){
             PlayerNotOnBikeCollideWithFarawayIslandMew(direction);
             return;
         }
-        else
-        {
+        else{
             u8 adjustedCollision = collision - COLLISION_STOP_SURFING;
             if (adjustedCollision > 3)
                 PlayerNotOnBikeCollide(direction);
@@ -629,23 +624,21 @@ static void PlayerNotOnBikeMoving(u8 direction, u16 heldKeys)
         }
     }
 
-    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
-    {
+    if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING){
         // same speed as running
         PlayerWalkFast(direction);
         return;
     }
 
     if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
-     && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0)
-    {
-        PlayerRun(direction);
+     && IsRunningDisallowed(gObjectEvents[gPlayerAvatar.objectEventId].currentMetatileBehavior) == 0){
+        PlayerWalkNormal(direction);
         gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;
         return;
     }
-    else
-    {
-        PlayerWalkNormal(direction);
+    else{
+        PlayerRun(direction);
+        
     }
 }
 

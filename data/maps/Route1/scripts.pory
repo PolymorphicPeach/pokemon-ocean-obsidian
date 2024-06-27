@@ -1,3 +1,142 @@
 mapscripts Route1_MapScripts{
-    
+    MAP_SCRIPT_ON_TRANSITION: Route1_OnTransition
+}
+
+script Route1_OnTransition{
+
+}
+
+script tryMulti{
+    // lockall
+    // choose_mons
+    // multi_fixed_2_vs_2(TRAINER_WALLACE, text1test, TRAINER_SIDNEY, text2test, PARTNER_STEVEN, TRAINER_BACK_PIC_STEVEN)
+
+    // releaseall
+}
+
+script GildedHollow_Sign{
+    msgbox(Text_GildedHollow_Sign, MSGBOX_SIGN)
+}
+
+script Route1_Tuber{
+    trainerbattle_double(ROUTE1_TUBER, TuberIntro, TuberOutro, NeedPokemon)
+    msgbox(TuberStandard, MSGBOX_NPC)
+}
+
+script Route1_GameboyKid{
+    trainerbattle_double(ROUTE1_GAMEBOYKID, GameboyKidIntro, GameboyKidOutro, NeedPokemon)
+    msgbox(GameboyKidStandard, MSGBOX_NPC)
+}
+
+script Route1_Fisherman{
+    trainerbattle_double(ROUTE1_FISHERMAN, FishermanIntro, FishermanOutro, NeedPokemon)
+    msgbox(FishermanStandard, MSGBOX_NPC)
+}
+
+script Route1_Beauty{
+    trainerbattle_double(ROUTE1_BEAUTY, BeautyIntro, BeautyOutro, NeedPokemon)
+    msgbox(BeautyStandard, MSGBOX_NPC)
+}
+
+script Route1_Ninja{
+    trainerbattle_double(ROUTE1_NINJA, NinjaIntro, NinjaOutro, NeedPokemon)
+    msgbox(NinjaStandard, MSGBOX_NPC)
+}
+
+script Route1_AromaLady{
+    trainerbattle_double(ROUTE1_AROMALADY, AromaLadyIntro, AromaLadyOutro, NeedPokemon)
+    msgbox(AromaLadyStandard, MSGBOX_NPC)
+}
+
+text TuberIntro{
+    "We're on vacation!"
+}
+
+text TuberOutro{
+    "The water here is so pretty!"
+}
+
+text TuberStandard{
+    "My Grandma lives just north of here.\n"
+    "I bet she'll let you take a rest!"
+}
+
+text GameboyKidIntro {
+    "Ugh, go away. I just want to play\n"
+    "Digimon in peace."
+}
+
+text GameboyKidOutro{
+    "I wish Digimon were real..."
+}
+
+text GameboyKidStandard{
+    "Do you really live here? This place is\n"
+    "in the middle of nowhere."
+}
+
+text FishermanIntro{
+    "Nice weather we're having, huh?"
+}
+
+text FishermanOutro{
+    "Did I forget to put sunscreen on?"
+}
+
+text FishermanStandard{
+    "I want to have fried Goldeen tacos\n"
+    "tonight, but my mother-in-law\l"
+    "won't allow it."
+}
+
+text BeautyIntro{
+    "You, local urchin, did you steal my\n"
+    "sunglasses?!"
+}
+
+text BeautyOutro{
+    "You're lucky that I only commit\n"
+    "white-collar crimes."
+}
+
+text BeautyStandard{
+    "My mother lives right over there\n"
+    "She'll love your hick-ish charm."
+}
+
+text NinjaIntro{
+    "You fell right into my trap!"
+}
+
+text NinjaOutro{
+    "Uhhh, do you think I could have the\n"
+    "bait back?"
+}
+
+text NinjaStandard{
+    "I'll just have to find something else\n"
+    "to lure passerby."
+}
+
+text AromaLadyIntro{
+    "Are you trying to steal my flowers."
+}
+
+text AromaLadyOutro{
+    "It's fine; I already picked them!\n"
+    "There may be some seeds left."
+}
+
+text AromaLadyStandard{
+    "this coast grows the prettiest flowers!"
+}
+
+text NeedPokemon{
+    "You don't have enough Pokemon\n"
+    "for a double battle."
+}
+
+text(local) Text_GildedHollow_Sign{
+    "{COLOR BLUE}Gilded Hollow\n"
+    "{COLOR RED}DANGER: Do Not Enter"
 }

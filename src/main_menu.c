@@ -1272,8 +1272,29 @@ static void HighlightSelectedMainMenuItem(u8 menuType, u8 selectedMenuItem, s16 
 #define tBrendanSpriteId data[10]
 #define tMaySpriteId data[11]
 
-static void Task_NewGameBirchSpeech_Init(u8 taskId)
-{
+static void Task_Obsidian_NewGame_Init(u8 taskId){
+
+
+
+    // ===== Taken from original NewGameBirchSpeech_Init ========
+    ScanlineEffect_Stop();
+    ResetSpriteData();
+    FreeAllSpritePalettes();
+    ResetAllPicSprites();
+    gTasks[taskId].tBG1HOFS = 0;
+    gTasks[taskId].func = Task_NewGameBirchSpeech_FadePlayerToWhite;
+    gTasks[taskId].tPlayerSpriteId = SPRITE_NONE;
+    gTasks[taskId].data[3] = 0xFF;
+    gTasks[taskId].tTimer = 0x0;
+    ShowBg(0);
+    ShowBg(1);
+}
+
+static void Task_Obsidian_ChooseCharacter(u8 taskId){
+    
+}
+
+static void Task_NewGameBirchSpeech_Init(u8 taskId) {
     SetGpuReg(REG_OFFSET_DISPCNT, 0);
     SetGpuReg(REG_OFFSET_DISPCNT, DISPCNT_OBJ_ON | DISPCNT_OBJ_1D_MAP);
     //InitBgFromTemplate(&sBirchBgTemplate);

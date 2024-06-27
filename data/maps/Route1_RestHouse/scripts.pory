@@ -1,0 +1,227 @@
+mapscripts Route1_RestHouse_MapScripts{
+    MAP_SCRIPT_ON_TRANSITION: Route1_RestHouse_OnTransition
+}
+
+script Route1_RestHouse_OnTransition{
+    setrespawn(HEAL_LOCATION_ROUTE_1)
+    setflag(FLAG_TEMP_1)
+    setflag(FLAG_TEMP_2)
+
+    // Will need again later
+    setvar(VAR_0x8008, INGAME_TRADE_AXEW)
+    // GetInGameTradeSpeciesInfo reads from VAR_0x8004 to get the Ingame trade
+    copyvar(VAR_0x8004, VAR_0x8008)
+    // GetInGameTradeSpeciesInfo returns the species that the trader wants from the player
+    specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+}
+
+script Route1_RestHouse_Rest{
+    lock
+    msgbox("{COLOR BLUE}Would you like to go to sleep and heal\nyour party?", MSGBOX_YESNO)
+    if(var(VAR_RESULT) == YES){
+        special(HealPlayerParty)
+        fadescreen(FADE_TO_BLACK)
+        playfanfare(MUS_RG_HEAL)
+        fadescreen(FADE_FROM_BLACK)
+    }
+    release
+}
+
+
+
+script Route1_RestHouse_LeftEnter{
+    lock
+    setvar(VAR_TEMP_0, 1)
+    addobject(3)
+    clearflag(FLAG_TEMP_1)
+    applymovement(3, LeftWalkToCouch)
+    waitmovement(3)
+    release
+}
+
+script Route1_RestHouse_RightEnter{
+    lock
+    setvar(VAR_TEMP_0, 1)
+    addobject(5)
+    clearflag(FLAG_TEMP_2)
+    applymovement(5, RightWalkToCouch)
+    waitmovement(5)
+    release
+}
+
+script Route1_RestHouse_AllowExitScript{
+    setvar(VAR_TEMP_0, 2)
+}
+
+script Route1_RestHouse_LeftExit{
+    lock
+
+    if(!flag(FLAG_TEMP_1)){
+        applymovement(3, LeftWalkFromCouch)
+        waitmovement(3)
+        setflag(FLAG_TEMP_1)
+        removeobject(3)
+    }
+    else{
+        applymovement(5, LeftWalkFromCouch)
+        waitmovement(5)
+        setflag(FLAG_TEMP_2)
+        removeobject(5)
+    }
+
+    
+    release
+}
+
+script Route1_RestHouse_RightExit{
+    lock
+
+    if(!flag(FLAG_TEMP_1)){
+        applymovement(3, RightWalkFromCouch)
+        waitmovement(3)
+        setflag(FLAG_TEMP_1)
+        removeobject(3)
+    }
+    else{
+        applymovement(5, RightWalkFromCouch)
+        waitmovement(5)
+        setflag(FLAG_TEMP_2)
+        removeobject(5)
+    }
+
+    release
+}
+
+script Route1_RestHouse_Yew{
+    msgbox(Route1_RestHouse_Yew_Text, MSGBOX_NPC)
+}
+
+text Route1_RestHouse_Yew_Text{
+    "{COLOR BLUE}Yew: {COLOR RED}Gilded Hollow {COLOR DARK_GRAY}used to be full of\n"
+    "gold veins.\p"
+    "The gold was strip-mined when humans\n"
+    "transitioned from apricot Pokeballs\l"
+    "to metal Pokeballs."
+}
+
+movement LeftWalkToCouch{
+    emote_heart
+    walk_fast_right * 3
+    walk_fast_up
+    walk_fast_right * 2
+    walk_fast_up
+    face_down
+}
+
+movement RightWalkToCouch{
+    emote_heart
+    walk_fast_right * 2
+    walk_fast_up
+    walk_fast_right * 2
+    walk_fast_up
+    face_down
+}
+
+movement LeftWalkFromCouch{
+    emote_exclamation_mark
+    walk_fast_down * 2
+    walk_fast_left * 5
+    walk_fast_down
+}
+
+movement RightWalkFromCouch{
+    emote_exclamation_mark
+    walk_fast_down * 2
+    walk_fast_left * 4
+    walk_fast_down
+}
+
+script Route1_RestHouse_Owner{
+    msgbox(Route1_RestHouse_Owner_Text, MSGBOX_NPC)
+}
+
+text Route1_RestHouse_Owner_Text{
+    "Hello dear, feel free to stay and rest\n"
+    "with your Pokemon."
+}
+
+script Route1_RestHouse_Store{
+    lock
+    faceplayer
+    msgbox("I got a few supplies for sale here.")
+    waitmessage
+    pokemart(Route1_RestHouse_Store_Items)
+    msgbox("Thanks.")
+    release
+}
+
+mart Route1_RestHouse_Store_Items{
+    ITEM_POTION
+    ITEM_SUPER_POTION
+    ITEM_REVIVE
+    ITEM_ANTIDOTE
+    ITEM_AWAKENING
+    ITEM_PARALYZE_HEAL
+    ITEM_BURN_HEAL
+    ITEM_ICE_HEAL
+    ITEM_REPEL
+    ITEM_POKE_BALL
+    ITEM_ESCAPE_ROPE
+    ITEM_ABILITY_CAPSULE
+    ITEM_ABILITY_PATCH
+}
+
+script Route1_RestHouse_Wyverna{
+    lockall
+    faceplayer
+
+    if(!flag(FLAG_AXEW_TRADE)){
+        msgbox(Route1_RestHouse_WyvernaAskToTrade, MSGBOX_YESNO)
+         waitmessage
+         if(var(VAR_RESULT) == YES){
+            special(ChoosePartyMon)
+            waitstate
+
+            // !!! 0x8004 now containers the pokemon chosen by the player !!!
+            // put it into 0x8005 to "save" it and pass it to GetTradeSpecies
+            // 0x8005 is the mon that the player will trade away
+            copyvar(VAR_0x8005, VAR_0x8004)
+            // Uses 0x8005
+            specialvar(VAR_RESULT, GetTradeSpecies)
+
+            if(var(VAR_RESULT) == VAR_0x8009){
+                // CreateInGameTradePokemon calls CreateInGameTradePokemonInternal(arg1, arg2)
+                // arg1 = The pokemon being traded away from the player (0x8005)
+                // arg2 = The trade itself (0x8004)
+                copyvar(VAR_0x8004, VAR_0x8008)
+                special(CreateInGameTradePokemon)
+                special(DoInGameTradeScene)
+                setflag(FLAG_AXEW_TRADE)
+                waitstate
+
+                msgbox("Excellent, this shall make a fine\ndestructive force.", MSGBOX_AUTOCLOSE)
+                
+            }
+            else{
+                msgbox("Are you trying to scam me?\nYou don't have an {COLOR RED}Onix {COLOR DARK_GRAY}...", MSGBOX_AUTOCLOSE)
+            }
+
+         }
+         else{
+            msgbox("Ok, maybe later then?", MSGBOX_AUTOCLOSE)
+         }
+    }
+    else{
+        msgbox("Thank you! Take good care of {COLOR RED}Syrax{COLOR DARK_GRAY}.", MSGBOX_AUTOCLOSE)
+    }
+
+    releaseall
+}
+
+text Route1_RestHouse_WyvernaAskToTrade{
+    "I came out here to catch an {COLOR RED}Onix {COLOR DARK_GRAY},\n"
+    "but now I'm too comfy.\p"
+    "Would you trade an {COLOR RED}Onix {COLOR DARK_GRAY}for my {COLOR RED}Axew{COLOR DARK_GRAY}?"
+
+}
+

@@ -525,12 +525,10 @@ static void Task_StatEditorWaitFadeIn(u8 taskId)
         gTasks[taskId].func = Task_StatEditorMain;
 }
 
-static void Task_StatEditorTurnOff(u8 taskId)
-{
+static void Task_StatEditorTurnOff(u8 taskId){
     // s16 *data = gTasks[taskId].data;
 
-    if (!gPaletteFade.active)
-    {
+    if (!gPaletteFade.active){
         SetMainCallback2(sStatEditorDataPtr->savedCallback);
         StatEditor_FreeResources();
         DestroyTask(taskId);
@@ -662,8 +660,7 @@ static void PrintTitleToWindowMainState()
     CopyWindowToVram(WINDOW_1, 3);
 }
 
-static void PrintTitleToWindowEditState()
-{
+static void PrintTitleToWindowEditState(){
     FillWindowPixelBuffer(WINDOW_1, PIXEL_FILL(TEXT_COLOR_TRANSPARENT));
     
     AddTextPrinterParameterized4(WINDOW_1, FONT_NORMAL, 1, 0, 0, 0, sMenuWindowFontColors[FONT_WHITE], TEXT_SKIP_DRAW, sText_MenuTitle);
@@ -861,7 +858,7 @@ static void Task_StatEditorMain(u8 taskId) // input control when first loaded in
         gTasks[taskId].func = Task_MenuEditingStat;
         if(sStatEditorDataPtr->editingStat == 0)
             StartSpriteAnim(&gSprites[sStatEditorDataPtr->selectorSpriteId], 1);
-        if((sStatEditorDataPtr->editingStat == 252 || (sStatEditorDataPtr->evTotal == 510)) && (sStatEditorDataPtr->selector_x == 0))
+        if((sStatEditorDataPtr->editingStat == 252 || (sStatEditorDataPtr->evTotal == 508)) && (sStatEditorDataPtr->selector_x == 0))
             StartSpriteAnim(&gSprites[sStatEditorDataPtr->selectorSpriteId], 2);
         if((sStatEditorDataPtr->editingStat == 31) && (sStatEditorDataPtr->selector_x == 1))
             StartSpriteAnim(&gSprites[sStatEditorDataPtr->selectorSpriteId], 2);

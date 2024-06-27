@@ -227,189 +227,304 @@ BrineshoreTown_Lab_RemoveStarterPokeball_10:
 	return
 
 
-BrineshoreTown_Lab_YewGivePokedex::
-# 140 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	lock
-# 141 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	msgbox GivePokedex
-# 142 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	playfanfare MUS_OBTAIN_ITEM
-# 143 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	setflag FLAG_SYS_POKEDEX_GET
-# 144 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	waitmessage
-# 145 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	release
-	return
-
-
 BrineshoreTown_Lab_TalkToYew::
-# 149 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	lock
-# 150 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	faceplayer
-# 151 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	goto_if_set FLAG_STARTER_BALL_4, BrineshoreTown_Lab_TalkToYew_2
-# 155 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	msgbox BrokenComputer
-BrineshoreTown_Lab_TalkToYew_1:
-# 157 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	release
+# 140 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	goto_if_set FLAG_STARTER_BALL_4, BrineshoreTown_Lab_TalkToYew_1
+# 144 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox BrineshoreTown_Lab_TalkToYew_Text_1, MSGBOX_NPC
 	return
 
-BrineshoreTown_Lab_TalkToYew_2:
-# 152 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	msgbox FixedComputer
-	goto BrineshoreTown_Lab_TalkToYew_1
+BrineshoreTown_Lab_TalkToYew_1:
+# 141 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox BrineshoreTown_Lab_TalkToYew_Text_0, MSGBOX_NPC
+	return
 
 
-BrineshoreTown_Lab_YewJoinsHumanParty::
-# 161 "data/maps/BrineshoreTown_Lab/scripts.pory"
+BrineshoreTown_Lab_LeaveLeftTrigger::
+# 149 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	lockall
-# 163 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 151 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	compare BRINESHORETOWN_STATE, 1
-	goto_if_eq BrineshoreTown_Lab_YewJoinsHumanParty_3
-BrineshoreTown_Lab_YewJoinsHumanParty_1:
-# 176 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	releaseall
-	end
-
-BrineshoreTown_Lab_YewJoinsHumanParty_2:
+	goto_if_eq BrineshoreTown_Lab_LeaveLeftTrigger_3
+BrineshoreTown_Lab_LeaveLeftTrigger_1:
 # 164 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	msgbox WaitText
-# 165 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, face_up
-# 166 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	applymovement 5, ProfessorWalkDown
-# 167 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	waitmovement 5
-# 168 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	msgbox TakeYew
-# 169 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	waitmessage
-# 170 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	setflag FLAG_SYS_COMPANION_GET
-# 171 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	setvar BRINESHORETOWN_STATE, 3
-# 172 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	removeobject 6
-# 173 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	setflag FLAG_TEMP_1
-	goto BrineshoreTown_Lab_YewJoinsHumanParty_1
+	releaseall
+	return
 
-BrineshoreTown_Lab_YewJoinsHumanParty_3:
-# 163 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	goto_if_unset FLAG_SYS_COMPANION_GET, BrineshoreTown_Lab_YewJoinsHumanParty_2
-	goto BrineshoreTown_Lab_YewJoinsHumanParty_1
+BrineshoreTown_Lab_LeaveLeftTrigger_2:
+# 152 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox WaitText
+# 153 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, face_up
+# 154 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement 5, ProfessorWalkLeftTrigger
+# 155 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmovement 5
+# 157 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	call YewJoinsLeft
+# 159 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	setflag FLAG_SYS_COMPANION_GET
+# 160 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	setvar BRINESHORETOWN_STATE, 3
+# 161 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	setflag FLAG_TEMP_1
+	goto BrineshoreTown_Lab_LeaveLeftTrigger_1
+
+BrineshoreTown_Lab_LeaveLeftTrigger_3:
+# 151 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	goto_if_unset FLAG_SYS_COMPANION_GET, BrineshoreTown_Lab_LeaveLeftTrigger_2
+	goto BrineshoreTown_Lab_LeaveLeftTrigger_1
+
+
+BrineshoreTown_Lab_LeaveRightTrigger::
+# 168 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	lockall
+# 170 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	compare BRINESHORETOWN_STATE, 1
+	goto_if_eq BrineshoreTown_Lab_LeaveRightTrigger_3
+BrineshoreTown_Lab_LeaveRightTrigger_1:
+# 185 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	releaseall
+	return
+
+BrineshoreTown_Lab_LeaveRightTrigger_2:
+# 171 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox WaitText
+# 172 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, face_up
+# 173 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement 5, ProfessorWalkRightTrigger
+# 174 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmovement 5
+# 176 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	call YewJoinsRight
+# 178 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	setflag FLAG_SYS_COMPANION_GET
+# 179 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	setvar BRINESHORETOWN_STATE, 3
+# 180 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	removeobject 6
+# 181 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	setflag FLAG_TEMP_1
+	goto BrineshoreTown_Lab_LeaveRightTrigger_1
+
+BrineshoreTown_Lab_LeaveRightTrigger_3:
+# 170 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	goto_if_unset FLAG_SYS_COMPANION_GET, BrineshoreTown_Lab_LeaveRightTrigger_2
+	goto BrineshoreTown_Lab_LeaveRightTrigger_1
+
+
+YewJoinsLeft::
+# 189 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox TakeYew
+# 190 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement 6, YewWalkLeftTrigger
+# 191 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmovement 6
+# 192 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	call YewGivePokedexAndEevee
+# 193 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement 6, walk_down
+# 194 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmovement 6
+# 195 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	removeobject 6
+	return
+
+
+YewJoinsRight::
+# 199 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox TakeYew
+# 200 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement 6, YewWalkRightTrigger
+# 201 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmovement 6
+# 202 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement OBJ_EVENT_ID_PLAYER, face_right
+# 203 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmovement 0
+# 204 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	call YewGivePokedexAndEevee
+# 205 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	applymovement 6, walk_left
+# 206 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmovement 6
+# 207 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	removeobject 6
+	return
+
+
+YewGivePokedexAndEevee::
+# 211 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	setvar VAR_TEMP_2, 5
+# 213 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox GivePokedex
+# 214 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	waitmessage
+# 215 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 216 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox YewGivePokedexAndEevee_Text_0, MSGBOX_AUTOCLOSE
+# 217 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	showmonpic SPECIES_EEVEE, 10, 3
+# 218 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	msgbox YewGivePokedexAndEevee_Text_1, MSGBOX_AUTOCLOSE
+# 219 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	givemon SPECIES_EEVEE, 5, ITEM_NONE, ITEM_POKE_BALL, VAR_TEMP_2, 1
+# 220 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	hidemonpic
+	return
 
 
 BrineshoreTown_Lab_TalkToProfessor::
-# 181 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 225 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	lock
-# 182 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 226 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	faceplayer
-# 183 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 227 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	goto_if_unset FLAG_SYS_POKEMON_GET, BrineshoreTown_Lab_TalkToProfessor_2
-# 188 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 232 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	msgbox BrineshoreTown_Lab_TalkToProfessor_Text_0
-# 189 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 233 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	waitmessage
 BrineshoreTown_Lab_TalkToProfessor_1:
-# 191 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 235 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	release
 	return
 
 BrineshoreTown_Lab_TalkToProfessor_2:
-# 184 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 228 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	msgbox StandardProfessorText
-# 185 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 229 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	waitmessage
 	goto BrineshoreTown_Lab_TalkToProfessor_1
 
 
-# 196 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 240 "data/maps/BrineshoreTown_Lab/scripts.pory"
 YewWalkToProfessor:
-# 197 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 241 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_fast_left
-# 197 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 241 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_fast_left
-# 197 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 241 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_fast_left
-# 198 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 242 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	face_down
 	step_end
 
-# 201 "data/maps/BrineshoreTown_Lab/scripts.pory"
-ProfessorWalkDown:
-# 202 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 245 "data/maps/BrineshoreTown_Lab/scripts.pory"
+ProfessorWalkLeftTrigger:
+# 246 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_right
-# 202 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 246 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_right
-# 203 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 247 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_down
-# 203 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 247 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_down
 	step_end
 
-# 206 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 250 "data/maps/BrineshoreTown_Lab/scripts.pory"
+ProfessorWalkRightTrigger:
+# 251 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_right
+# 251 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_right
+# 251 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_right
+# 252 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_down
+# 252 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_down
+	step_end
+
+# 255 "data/maps/BrineshoreTown_Lab/scripts.pory"
+YewWalkLeftTrigger:
+# 256 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_down
+# 257 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_left
+# 257 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_left
+# 257 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_left
+	step_end
+
+# 260 "data/maps/BrineshoreTown_Lab/scripts.pory"
+YewWalkRightTrigger:
+# 261 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_down
+# 262 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_left
+# 262 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_left
+	step_end
+
+# 265 "data/maps/BrineshoreTown_Lab/scripts.pory"
+walk_left:
+# 266 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	walk_left
+	step_end
+
+# 269 "data/maps/BrineshoreTown_Lab/scripts.pory"
 walk_up:
-# 207 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 270 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	walk_up
 	step_end
 
+BrineshoreTown_Lab_TalkToYew_Text_0:
+# 141 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}Hey, the computer is\nworking again!$"
+
+BrineshoreTown_Lab_TalkToYew_Text_1:
+# 144 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}Ugh, this computer is\nalways crashing.\lI think it's that Porygon...$"
+
+YewGivePokedexAndEevee_Text_0:
+# 216 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}You got a Pokedex!$"
+
+YewGivePokedexAndEevee_Text_1:
+# 218 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}You got an Eevee!$"
+
 BrineshoreTown_Lab_TalkToProfessor_Text_0:
-# 188 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 232 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Good luck.$"
 
 StandardProfessorText::
-# 210 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Go ahead and choose a\n"
-	.string "Pokemon,\n"
-	.string "I need to get this delivery sorted.\p"
-	.string "$"
+# 273 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Go ahead and choose a Pokemon,\n"
+	.string "I need to get this delivery sorted.$"
 
 ChooseStarterText::
-# 215 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 278 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}{PLAYER}, is this {STR_VAR_1} the\n"
 	.string "one you want?\p$"
 
 StarterChosenText::
-# 220 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 283 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}An excellent choice.$"
 
 StillLookingText::
-# 224 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 287 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Ok, {PLAYER}, take your time.\p$"
 
 CantTakeAnother::
-# 228 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 291 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}You can't have that,\n"
 	.string "stop being greedy!$"
 
 WaitText::
-# 233 "data/maps/BrineshoreTown_Lab/scripts.pory"
+# 296 "data/maps/BrineshoreTown_Lab/scripts.pory"
 	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}WAIT!\p$"
 
 TakeYew::
-# 237 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Assistant Yew has yet to\n"
-	.string "pass the POPME.\p"
-	.string "You'll be taking him north with you to\n"
-	.string "the\n"
-	.string "Academy where he can take the exam.$"
+# 300 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	.string "{COLOR RED}{SHADOW LIGHT_RED}Professor: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Assistant Yew needs you\n"
+	.string "to take him north to the academy.$"
 
 GivePokedex::
-# 242 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}I need you to escort me,\n"
-	.string "north. In exchange for your trouble, take\p"
-	.string "this Pokedex.$"
-
-BrokenComputer::
-# 248 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}That Porygon is\n"
-	.string "always breaking this computer somehow...$"
-
-FixedComputer::
-# 253 "data/maps/BrineshoreTown_Lab/scripts.pory"
-	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Take good care of\n"
-	.string "Porygon for me.$"
+# 306 "data/maps/BrineshoreTown_Lab/scripts.pory"
+	.string "{COLOR BLUE}{SHADOW LIGHT_BLUE}Assistant Yew: {COLOR DARK_GRAY}{SHADOW LIGHT_GRAY}Thank you for helping!\n"
+	.string "Here, consider it a form of payment.$"

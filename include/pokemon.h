@@ -235,8 +235,7 @@ union PokemonSubstruct
     u16 raw[NUM_SUBSTRUCT_BYTES / 2]; // /2 because it's u16, not u8
 };
 
-struct BoxPokemon
-{
+struct BoxPokemon {
     u32 personality;
     u32 otId;
     u8 nickname[min(10, POKEMON_NAME_LENGTH)];
@@ -262,8 +261,7 @@ struct BoxPokemon
     } secure;
 };
 
-struct Pokemon
-{
+struct Pokemon {
     struct BoxPokemon box;
     u32 status;
     u8 level;
